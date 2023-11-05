@@ -1,4 +1,5 @@
-### Hi there 👋
+# We are The Community to Trying Create The The to do the things that we want to do.
+わたしたちは、実現したいことを快適に実現するための場所・環境をつくり、こ・こ・ろ・豊かな新しい生活を提案する団体です。
 
 <!--
 **pe-hu/pe-hu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
