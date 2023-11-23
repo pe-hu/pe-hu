@@ -1,0 +1,33 @@
+.sky {
+  background: linear-gradient(90deg, #B3CBF6, #FFC778, #EEE);
+  background-size: 400% 400%;
+  box-sizing: border-box;
+  color: #fff;
+  animation: sky 10s ease infinite;
+}
+
+@keyframes sky {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.sky {
+  font-family: 'Futura', monospace;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 2rem 4.5rem;
+}
+
+@media screen and (max-width: 750px) {
+  .sky {
+    font-size: 5.5vw;
+    padding: 5.5vw 7.5vw;
+  }
+}

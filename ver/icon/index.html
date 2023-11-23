@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="icon" href="favicon.png" type="image/png">
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <style type="text/css">
+    @font-face {
+      font-family: 'MS Mincho';
+      src: url("../font/MSMincho.ttc");
+    }
+
+    @font-face {
+      font-family: 'SimSun';
+      src: url("../font/SimSun.ttc");
+    }
+
+    body {
+      font-family: 'MS Mincho', 'SimSun', serif;
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="create">
+    <input type="text" id="canvas_text" value="∧°┐">
+    <button onclick="creatIcons()">creatIcons()</button>
+  </nav>
+
+  <main id="logo">
+    <section>
+      <p>
+        <small>ファビコン</small><br />
+        32 × 32 px
+      </p>
+      <canvas id="icon" width="32" height="32"></canvas>
+    </section>
+    <section>
+      <p>
+        <small>Windows用アイコン(小)</small><br />
+        70 × 70 px
+      </p>
+      <canvas id="tile-small" width="70" height="70"></canvas>
+    </section>
+    <section>
+      <p>
+        <small>Windows用アイコン(中)</small><br />
+        150 × 150 px
+      </p>
+      <canvas id="tile-medium" width="150" height="150"></canvas>
+    </section>
+    <section>
+      <p>
+        <small>iOS端末用Webクリップアイコン</small><br />
+        180 × 180 px
+      </p>
+      <canvas id="apple" width="180" height="180"></canvas>
+    </section>
+    <section>
+      <p>
+        <small>Android端末用Webクリップアイコン</small><br />
+        192 × 192 px
+      </p>
+      <canvas id="android" width="192" height="192"></canvas>
+    </section>
+    <section>
+      <p>
+        <small>Windows用アイコン(ワイド)</small><br />
+        310 × 150 px
+      </p>
+      <canvas id="tile-wide" width="310" height="150"></canvas>
+    </section>
+    <section>
+      <p>
+        <small>Windows用アイコン(大)・Instagram用アイコン</small><br />
+        320 × 320 px
+      </p>
+      <canvas id="instagram" width="320" height="320"></canvas>
+    </section>
+    <section>
+      <p>
+        <small>Twitter用アイコン</small><br />
+        400 × 400 px
+      </p>
+      <canvas id="twitter" width="400" height="400"></canvas>
+    </section>
+    <section>
+      <p>
+        <small>サマリーカード・YouTube用アイコン</small><br />
+        800 × 800 px
+      </p>
+      <canvas id="youtube" width="800" height="800"></canvas>
+    </section>
+    <pre>
+<u>フォント</u>
+
+MS 明朝 (MS Mincho)
+by Microsoft Corp.
+
+© 2017 data:RICOH Co.,Ltd. typeface:RYOBI IMAGIX CO.
+    </pre>
+    <pre>
+<u>代用フォント</u>
+
+SimSun (新宋体)
+© Copyright ZHONGYI Electronic Co. 2001
+    </pre>
+  </main>
+
+  <script type="text/javascript">
+    'use strict'
+
+    function creatIcons() {
+      const canvasAll = document.querySelectorAll('canvas');
+      const text = document.querySelector('#canvas_text');
+      for (let canvas of canvasAll) {
+        if (canvas.getContext) {
+          const ctx = canvas.getContext('2d');
+          const x = (canvas.width / 2);
+          const y = (canvas.height / 2);
+
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+          ctx.font = `${x * 0.95}px 'MS Mincho', 'SimSun', serif`;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#000';
+          ctx.fillText(text.value, x, y, x);
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

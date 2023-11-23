@@ -1,0 +1,80 @@
+main,
+nav,
+canvas,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#create,
+#logo {
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#create {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#create input,
+#create button {
+    font-size: 16px;
+    font-family: inherit;
+    padding: 0.25rem;
+    margin: 0.25rem;
+}
+
+section {
+    padding: 0;
+    margin: 0.5rem;
+}
+
+@page {
+    size: A5;
+}
+
+@media print {
+    #logo section {
+        break-inside: avoid;
+    }
+}
+
+section p {
+    display: none;
+    position: absolute;
+    font-size: 90%;
+    pointer-events: none;
+    user-select: none;
+}
+
+section:hover p {
+    display: block;
+}
+
+section small {
+    background: #000;
+    color: #fff;
+}
+
+pre {
+    box-sizing: border-box;
+    font-family: inherit;
+    padding: 0;
+    margin: 1rem;
+    overflow: auto;
+    max-width: 100%;
+}
+
+#logo {
+    margin-bottom: 1.5rem;
+}

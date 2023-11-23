@@ -1,0 +1,52 @@
+html {
+  height: -webkit-fill-available;
+  font-size: 16px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+  transition: 1s;
+}
+
+a:hover {
+  color: blue;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("/ver/font/Arial.ttf");
+}
+
+@font-face {
+  font-family: "MS Mincho";
+  src: url("/ver/font/MSMincho.ttc");
+}
+
+@font-face {
+  font-family: "SimSong";
+  src: url("/ver/font/SimSong.ttc");
+}
+
+@font-face {
+  font-family: "Times New Roman";
+  src: url("/ver/font/times.ttf");
+}
+
+.pehu {
+  font-family: "MS Mincho", "SimSong", serif;
+}
+
+@media screen and (max-width: 550px) {
+  html {
+    font-size: 3vw;
+  }
+}
