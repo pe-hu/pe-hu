@@ -23,22 +23,22 @@ a:hover {
 
 @font-face {
   font-family: "Arial";
-  src: url("/ver/font/Arial.ttf");
+  src: url("font/Arial.ttf");
 }
 
 @font-face {
   font-family: "MS Mincho";
-  src: url("/ver/font/MSMincho.ttc");
+  src: url("font/MSMincho.ttc");
 }
 
 @font-face {
   font-family: "SimSong";
-  src: url("/ver/font/SimSong.ttc");
+  src: url("font/SimSong.ttc");
 }
 
 @font-face {
   font-family: "Times New Roman";
-  src: url("/ver/font/times.ttf");
+  src: url("font/times.ttf");
 }
 
 .pehu {

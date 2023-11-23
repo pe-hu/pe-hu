@@ -6,31 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
   <link rel="icon" href="favicon.png" type="image/png">
-  <script type="text/javascript" src="script.js"></script>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="android.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="ios.png" sizes="180x180" type="image/png">
+
   <style type="text/css">
     @font-face {
       font-family: 'MS Mincho';
-      src: url("../font/MSMincho.ttc");
+      src: url("font/MSMincho.ttc");
     }
 
     @font-face {
       font-family: 'SimSun';
-      src: url("../font/SimSun.ttc");
+      src: url("font/SimSun.ttc");
     }
 
     body {
       font-family: 'MS Mincho', 'SimSun', serif;
     }
   </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <nav id="create">
-    <input type="text" id="canvas_text" value="∧°┐">
-    <button onclick="creatIcons()">creatIcons()</button>
-  </nav>
-
   <main id="logo">
     <section>
       <p>
@@ -116,7 +113,6 @@ SimSun (新宋体)
 
     function creatIcons() {
       const canvasAll = document.querySelectorAll('canvas');
-      const text = document.querySelector('#canvas_text');
       for (let canvas of canvasAll) {
         if (canvas.getContext) {
           const ctx = canvas.getContext('2d');
@@ -125,14 +121,15 @@ SimSun (新宋体)
 
           ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-          ctx.font = `${x * 0.95}px 'MS Mincho', 'SimSun', serif`;
+          ctx.font = `${x * 0.75}px 'MS Mincho', 'SimSun', serif`;
           ctx.textAlign = "center";
           ctx.textBaseline = "middle";
           ctx.fillStyle = '#000';
-          ctx.fillText(text.value, x, y, x);
+          ctx.fillText("∧° ┐", x*1.1, y, x*2);
         }
       }
     }
+    creatIcons()
   </script>
 </body>
 
