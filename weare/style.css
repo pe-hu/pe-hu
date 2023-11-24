@@ -1,23 +1,40 @@
 #weare {
-  display: flex;
-  overflow: auto;
-  background: #fff;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
+  position: relative;
+  display: grid;
+  place-items: center;
 }
 
 #weare section {
-  display: grid;
-  padding: 0.25rem;
-  height: 100%;
-  width: 450px;
-  min-width: 450px;
   overflow: auto;
+}
+
+/* デバイスが横向きの場合の記述 */
+@media (orientation: landscape) {
+  #weare {
+    font-size: 3vh;
+    width: 100%;
+    height: 100vh;
+    max-height: -webkit-fill-available;
+  }
+
+  #weare section {
+    width: 90vh;
+    height: 100%;
+    transform-origin: center center;
+    transform: rotate(90deg);
+  }
+}
+
+/* デバイスが縦向きの場合の記述 */
+@media (orientation: portrait) {
+  #weare {
+    font-size: 3vw;
+  }
+
+  #weare section {
+    width: 90%;
+    padding: 2.5vw 0;
+  }
 }
 
 #weare section .end {
@@ -28,34 +45,12 @@
   border: none;
 }
 
-#weare h1,
-#weare h2,
-#weare p,
-#weare hr {
-  padding: 0;
-  margin: 1.25rem;
-}
-
-#weare h1,
-#weare h2 {
-  font-size: 200%;
-  line-height: 155%;
-  font-weight: 500;
-  letter-spacing: 0.05rem;
-}
-
 #weare {
   font-family: "Arial", "Yu Gothic", sans-serif;
-  text-shadow: #fff 0.05rem 0.05rem 0;
-}
-
-#weare h1 {
-  font-family: "MS Mincho", "SimSong", serif;
 }
 
 #weare i,
-#weare a,
-#links u {
+#weare a {
   font-family: "Times New Roman", "MS Mincho", "SimSong", serif;
   font-size: 110%;
 }
@@ -63,6 +58,14 @@
 #weare i,
 #weare a {
   font-style: italic;
+}
+
+#weare h1,
+#weare h2 {
+  font-size: 200%;
+  font-weight: 500;
+  line-height: 155%;
+  letter-spacing: 0.05rem;
 }
 
 #weare p {
@@ -79,9 +82,16 @@
   letter-spacing: 0.02rem;
 }
 
-#weare h2 a {
+#weare h1,
+#weare h2,
+#weare p,
+#weare hr {
+  padding: 0;
+  margin: 1.25rem;
+}
+
+#weare a {
   display: inline-block;
-  color: #000;
   text-decoration: none;
   padding: 0 0.1rem;
   filter: blur(.5rem);
@@ -89,49 +99,10 @@
   transition: all 2.25s ease;
 }
 
-#weare h2 a:hover {
+#weare a:hover {
   cursor: pointer;
   filter: blur(0);
   -webkit-filter: blur(0);
-  transform: scale(1.25, 1.25);
+  transform: scale(1.11, 1.11);
   transition: all 1s ease;
-}
-
-@media screen and (max-width: 550px) {
-  #weare section {
-    width: 85vw;
-    min-width: 85vw;
-  }
-}
-
-#links {
-  display: flex;
-  flex-flow: column;
-}
-
-#links,
-#links a,
-#links a time {
-  font-size: 111%;
-  font-style: normal;
-  padding: 0.25rem 0.5rem;
-}
-
-#links,
-#links u {
-  margin: 0.25rem 0.5rem;
-}
-
-#links a {
-  display: flex;
-  justify-content: space-between;
-}
-
-#links a {
-  background: #fff;
-  border: solid 0.125rem;
-  border-radius: 2rem;
-  text-align: center;
-  text-decoration: none;
-  margin: 0.25rem;
 }

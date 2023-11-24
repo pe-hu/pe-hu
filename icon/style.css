@@ -1,9 +1,29 @@
 main,
-nav,
 canvas,
 p {
     padding: 0;
     margin: 0;
+}
+
+hr {
+    border: none;
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background: #fff;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #000;
+        color: #fff;
+    }
+}
+
+canvas {
+    background: #fff;
 }
 
 canvas {
@@ -12,7 +32,6 @@ canvas {
     max-height: 100%;
 }
 
-#create,
 #logo {
     display: flex;
     flex-flow: wrap;
@@ -20,24 +39,11 @@ canvas {
     justify-content: space-between;
 }
 
-#create {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-#create input,
-#create button {
-    font-size: 16px;
-    font-family: inherit;
-    padding: 0.25rem;
-    margin: 0.25rem;
-}
-
-section {
-    padding: 0;
-    margin: 0.5rem;
+header,
+footer,
+main section {
+    padding: 0.5rem;
+    margin: 0;
 }
 
 @page {
@@ -45,12 +51,12 @@ section {
 }
 
 @media print {
-    #logo section {
+    main section {
         break-inside: avoid;
     }
 }
 
-section p {
+main section p {
     display: none;
     position: absolute;
     font-size: 90%;
@@ -58,24 +64,20 @@ section p {
     user-select: none;
 }
 
-section:hover p {
+main section:hover p {
     display: block;
 }
 
-section small {
+main section small {
     background: #000;
     color: #fff;
 }
 
-pre {
+main pre {
     box-sizing: border-box;
     font-family: inherit;
-    padding: 0;
-    margin: 1rem;
     overflow: auto;
     max-width: 100%;
-}
-
-#logo {
-    margin-bottom: 1.5rem;
+    padding: 1rem;
+    margin: 0;
 }
