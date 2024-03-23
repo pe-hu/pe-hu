@@ -27,7 +27,7 @@ document.addEventListener('readystatechange', event => {
       randomMotto('#e', e_all);
       randomMotto('#h', h_all);
       randomMotto('#u', u_all);
-    }, 4000);
+    }, 4444);
 
     const mottoAll = document.querySelectorAll('#motto span')
     for (const mottoEach of mottoAll) {

@@ -1,10 +1,10 @@
 // https://cloud.google.com/speech-to-text/docs/languages?hl=ja
 
 let u_all = {
-  'Ufano': ['es-MX', '誇り'],
-  'Ultralight': ['en-US', '超軽量'],
-  'Ultra-nice': ['en-US', '超素敵'],
-  'Una': ['es-MX', '女性名詞の前に付ける不定冠詞'],
+  'Ufano': ['es-ES', '誇り'],
+  'Ultralight': ['ja-JP', '超軽量'],
+  'Ultra-nice': ['fr-FR', '超素敵'],
+  'Una': ['es-ES', '女性名詞の前に付ける不定冠詞'],
   'Unafraid': ['en-GB', '恐れがない、平然として'],
   'Unconditional': ['en-US', '無条件の、絶対的な'],
   'Understand': ['en-GB', '理解する'],
