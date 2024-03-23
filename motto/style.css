@@ -63,6 +63,7 @@ h1,
   background: #fff;
   display: grid;
   height: 40rem;
+  max-height: -webkit-fill-available;
 }
 
 #all h2 {
