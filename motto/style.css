@@ -3,13 +3,13 @@
   margin: 0;
 }
 
-h1,
 #random #motto span::after,
 #all dd {
   font-family: "MS Mincho", "SimSong", serif;
   font-weight: 400;
 }
 
+h1,
 #all h2,
 #all dt {
   font-family:  'Times New Roman', serif;
@@ -23,8 +23,13 @@ h1,
 }
 
 #random,
-#all {
+#all,
+#all section {
   width: 100%;
+}
+
+#random,
+#all {
   height: 100vh;
   max-height: -webkit-fill-available;
 }
@@ -33,9 +38,6 @@ h1,
   display: grid;
   place-items: center;
   padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 0;
 }
 
 #random #motto span {
@@ -71,18 +73,22 @@ h1,
   font-weight: 400;
 }
 
+#all section,
+#all section dl {
+  overflow: auto;
+}
+
 #all section {
   display: flex;
   place-items: end;
 }
 
-#all dl {
+#all section dl {
   font-size: 75%;
   padding: 0 1rem 0.5rem;
   width: 25%;
   min-width: 250px;
   height: calc(100vh - 12.5rem);
-  overflow: auto;
 }
 
 #all dt i {
@@ -101,10 +107,9 @@ h1,
     padding: 0.5rem 0;
   }
 
-  #all dl {
+  #all section dl {
     min-width: 45vw;
     height: calc(100vh - 50vw);
-    overflow: auto;
   }
 }
 

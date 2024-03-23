@@ -11,7 +11,6 @@ document.addEventListener('readystatechange', event => {
     };
 
     const motto = document.querySelector('#motto');
-    motto.style.fontFamily = `"MS Mincho", "SimSong", serif`;
 
     function randomMotto(query,thisArr) {
       const eachArr = getRandom(Object.entries(thisArr));
@@ -22,7 +21,6 @@ document.addEventListener('readystatechange', event => {
     };
 
     window.setInterval(function() {
-      motto.style.fontFamily = `'Times New Roman', serif`;
       randomMotto('#p', p_all);
       randomMotto('#e', e_all);
       randomMotto('#h', h_all);
