@@ -28,7 +28,8 @@ h1,
   width: 100%;
 }
 
-#random {
+#random,
+#all {
   height: 100vh;
   max-height: -webkit-fill-available;
 }
@@ -62,8 +63,6 @@ h1,
 #all {
   background: #fff;
   display: grid;
-  height: 40rem;
-  max-height: -webkit-fill-available;
 }
 
 #all h2 {
