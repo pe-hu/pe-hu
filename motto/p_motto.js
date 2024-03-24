@@ -37,7 +37,7 @@ let p_all = {
   'Possible': ['en-GB', '可能な'],
   'Possibly': ['en-US', 'もしかすると、ひょっとすると'],
   'Practical': ['en-US', '現実的な、実用的な'],
-  'Pretty': ['en-US', 'かわいい・心地よい、とても'],
+  'Pretty': ['en-US', 'とても、かわいい'],
   'Préférés': ['fr-FR', 'お気に入りの'],
   'Prender': ['es-ES', '捕らえる、つかむ'],
   'Preocupar': ['es-ES', '心配させる、不安にさせる'],
