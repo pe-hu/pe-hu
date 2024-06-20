@@ -44,9 +44,3 @@ a:hover {
 .pehu {
   font-family: "MS Mincho", "SimSong", serif;
 }
-
-@media screen and (max-width: 550px) {
-  html {
-    font-size: 3vw;
-  }
-}

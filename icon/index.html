@@ -8,9 +8,6 @@
   <title>∧° ┐ | creative, community space</title>
 
   <link rel="icon" href="favicon.png" type="image/png">
-  <link rel="icon" href="android.png" sizes="192x192" type="image/png">
-  <link rel="apple-touch-icon-precomposed" href="ios.png" sizes="180x180" type="image/png">
-
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="style.css" />
   <style type="text/css">
@@ -108,8 +105,9 @@ SimSun (新宋体)
   <footer></footer>
   <script src="../index.js"></script>
   <script type="text/javascript">
-    'use strict'
     fetchText('README.md', 'footer')
+    creatIcons()
+
     function creatIcons() {
       const canvasAll = document.querySelectorAll('canvas');
       for (let canvas of canvasAll) {
@@ -128,7 +126,6 @@ SimSun (新宋体)
         }
       }
     }
-    creatIcons()
   </script>
 </body>
 

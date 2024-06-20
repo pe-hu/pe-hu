@@ -1,0 +1,119 @@
+h2,
+fieldset,
+nav button {
+    padding: 0;
+    margin: 0;
+}
+
+#random,
+nav {
+    display: flex;
+}
+
+#random h1 {
+    display: grid;
+    place-items: center;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+}
+
+@media (min-width: 750px) {
+    #random {
+        flex-flow: row-reverse;
+        min-height: calc(100vh - 5rem);
+    }
+
+    #random h1,
+    #random div {
+        flex: 1;
+    }
+
+    #random h1 {
+        margin: auto;
+    }
+
+    h3.pehu {
+        font-size: 10vw;
+    }
+}
+
+@media (max-width: 750px) {
+    #random {
+        flex-flow: column;
+    }
+
+    #random h1 {
+        margin: 7.5rem 0;
+    }
+
+    h3.pehu {
+        font-size: 20vw;
+    }
+}
+
+#random h1 {
+    font-family: "Times New Roman", serif;
+    font-weight: 400;
+}
+
+#random h2 {
+    font-family: "Arial", "Yu Gothic", sans-serif;
+    font-weight: 400;
+}
+
+nav,
+nav button,
+.jp {
+    font-family: "MS Mincho", "SimSong", serif;
+}
+
+h3.pehu {
+    text-align: center;
+    font-weight: 400;
+}
+
+#random h1 {
+    font-size: 200%;
+}
+
+#random h2 {
+    font-size: 250%;
+    line-height: 150%;
+}
+
+#random h2 i {
+    font-family: "Times New Roman", "MS Mincho", "SimSong", serif;
+    font-size: 110%;
+}
+
+.jp {
+    line-height: 175%;
+}
+
+header,
+footer,
+nav,
+#random h1,
+#random div {
+    padding: 1rem;
+}
+
+#random h1 span {
+    margin: 1rem 0;
+}
+
+nav button {
+    border: none;
+    border-bottom: 0.1rem double;
+    outline: none;
+    background: none;
+    color: #000;
+}
+
+hr,
+fieldset {
+    border: none;
+}

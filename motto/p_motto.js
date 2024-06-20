@@ -45,4 +45,4 @@ let p_all = {
   'Proyecto': ['es-ES', 'プロジェクト'],
   'Purple': ['en-US', '紫(色)の、高位の・華麗な'],
   'Pursed': ['en-US', '口［唇］をすぼめて']
-};
+}

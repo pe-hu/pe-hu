@@ -29,4 +29,4 @@ let u_all = {
   'Useful': ['en-US', '役に立つ'],
   'Usefully': ['en-US', '役に立つように、有効に'],
   'Utopia': ['en-GB', 'ユートピア'],
-};
+}

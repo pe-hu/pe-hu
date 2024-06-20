@@ -40,4 +40,4 @@ let e_all = {
   'Exacto': ['es-ES', '正確な、正しい'],
   'Existing': ['en-GB', '現存する、現在の'],
   'Exhumation': ['en-US', '埋められていたもの（特に死体）を地面から掘り出す行為']
-};
+}

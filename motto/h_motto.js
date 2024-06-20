@@ -37,4 +37,4 @@ let h_all = {
   'Human': ['en-GB', '人の、人間の'],
   'Humor': ['ja-JP', 'ユーモア'],
   'Hydro': ['el-GR', '水力']
-};
+}

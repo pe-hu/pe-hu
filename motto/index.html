@@ -1,33 +1,64 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
   <title>P E H U is | Motto</title>
 
-  <link rel="stylesheet" href="../icon/index.css" />
-  <link rel="stylesheet" href="style.css" />
-  <script type="text/javascript" src="p_motto.js"></script>
-  <script type="text/javascript" src="e_motto.js"></script>
-  <script type="text/javascript" src="h_motto.js"></script>
-  <script type="text/javascript" src="u_motto.js"></script>
+  <link rel="icon" href="../icon/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../icon/index.css?=v0" />
+  <link rel="stylesheet" href="style.css?=v0" />
+  <script>
+    let jsArr = [
+      ["../motto", "p_motto"],
+      ["../motto", "e_motto"],
+      ["../motto", "h_motto"],
+      ["../motto", "u_motto"]
+    ]
+
+    document.addEventListener('readystatechange', event => {
+      if (event.target.readyState === 'interactive') {
+        window.setInterval(function () {
+          shuffleMotto('#p_motto', p_all);
+          shuffleMotto('#e_motto', e_all);
+          shuffleMotto('#h_motto', h_all);
+          shuffleMotto('#u_motto', u_all);
+        }, 4444);
+      } else if (event.target.readyState === 'complete') {
+        const mottoAll = document.querySelectorAll('#motto span')
+        for (const mottoEach of mottoAll) {
+          mottoEach.addEventListener('click', function () {
+            const uttr = new SpeechSynthesisUtterance();
+            uttr.text = this.innerText;
+            uttr.lang = this.lang;
+            uttr.rate = 0.75;
+            speechSynthesis.speak(uttr);
+          }, false);
+        }
+      }
+    }, false)
+  </script>
+  <script type="text/javascript" src="index.js?=v0"></script>
 </head>
+
 <body>
   <main id="random">
     <h1 id="motto">
       <span id="p">P E H U</span>
-      <span id="e">is</span>
+      <span id="e"></span>
       <span id="h"></span>
-      <span id="u"></span>
+      <span id="u">is</span>
     </h1>
   </main>
 
   <article id="all">
     <h2>
-      Please let me know if you found some stand for P E H U.<br/>
+      Please let me know if you found some stand for P E H U.<br />
       <a href="https://www.are.na/pe-hu/p-e-h-u-is" target="_blank" rel="noopener noreferrer">Are.na</a>
-      <a href="mailto:pehu@creative-community.space?subject=P%20E%20H%20U%20is%20|%20Motto&amp;body=P%0d%0aE%0d%0aH%0d%0aU%0d%0a">Email</a>
+      <a
+        href="mailto:pehu@creative-community.space?subject=P%20E%20H%20U%20is%20|%20Motto&amp;body=P%0d%0aE%0d%0aH%0d%0aU%0d%0a">Email</a>
     </h2>
     <section>
       <dl id="p_motto"></dl>
@@ -36,7 +67,6 @@
       <dl id="u_motto"></dl>
     </section>
   </article>
-  <script type="text/javascript" src="random.js"></script>
-  <script type="text/javascript" src="shuffle.js"></script>
 </body>
+
 </html>

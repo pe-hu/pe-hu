@@ -12,14 +12,17 @@
 h1,
 #all h2,
 #all dt {
-  font-family:  'Times New Roman', serif;
+  font-family: "Times New Roman", serif;
   font-weight: 400;
 }
 
 #random #motto,
-#all dt,
-#all h2 a {
+#all dt {
   font-size: 200%;
+}
+
+#all h2 a {
+  font-size: 150%;
 }
 
 #random,
@@ -34,8 +37,12 @@ h1,
   max-height: -webkit-fill-available;
 }
 
-#random {
+#random,
+#all {
   display: grid;
+}
+
+#random {
   place-items: center;
   padding: 1rem;
 }
@@ -58,11 +65,6 @@ h1,
   content: attr(value);
   font-size: 55%;
   width: 75%;
-}
-
-#all {
-  background: #fff;
-  display: grid;
 }
 
 #all h2 {
@@ -106,7 +108,7 @@ h1,
   }
 
   #all section dl {
-    min-width: 45vw;
+    min-width: 70vw;
     height: calc(100vh - 50vw);
   }
 }
