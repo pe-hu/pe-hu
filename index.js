@@ -19,3 +19,11 @@ async function fetchHTML(url = '', query = '') {
 function fontSize(px) {
   document.body.style.fontSize = px;
 }
+
+function changeTheme() {
+  if (document.getElementById('theme').checked === true) {
+    document.documentElement.setAttribute('data-theme', 'dark')
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light')
+  }
+}

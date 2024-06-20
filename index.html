@@ -27,12 +27,39 @@
       ["motto", "h_motto"],
       ["motto", "u_motto"]
     ]
+
+    document.addEventListener('readystatechange', event => {
+      if (event.target.readyState === 'interactive') {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          /* ダークテーマの時 */
+          document.getElementById('theme').checked = true;
+          changeTheme()
+        } else {
+          /* ライトテーマの時 */
+          document.getElementById('theme').checked = false;
+          changeTheme()
+        }
+      }
+    }, false)
   </script>
   <script src="index.js"></script>
   <script src="motto/index.js?=v0"></script>
 </head>
 
 <body>
+  <nav>
+    <fieldset id="fontSize">
+      <input type="radio" id="Large" name="fontSize" value="Large" onchange="fontSize('20px')" />
+      <label style="font-size: 20px;" for="Large">大</label>
+      <input type="radio" id="Medium" name="fontSize" value="Medium" onchange="fontSize('16px')" checked />
+      <label style="font-size: 16px;" for="Medium">標準</label>
+      <input type="radio" id="Small" name="fontSize" value="Small" onchange="fontSize('12px')" />
+      <label style="font-size: 12px;" for="Small">小</label>
+    </fieldset>
+    <input type="checkbox" id="theme" onchange="changeTheme()">
+    <label for="theme"></label>
+  </nav>
+
   <main id="random">
     <h1 id="motto">
       <span id="p">P E H U</span>
@@ -55,15 +82,6 @@
       <h3 class="pehu">∧° ┐</h3>
     </div>
   </main>
-
-  <nav>
-    <fieldset id="fontSize">
-      <legend>Font Size</legend>
-      <button type="button" onclick="fontSize('20px')">Large</button>
-      <button type="button" onclick="fontSize('16px')">Medium</button>
-      <button type="button" onclick="fontSize('12px')">Small</button>
-    </fieldset>
-  </nav>
 </body>
 
 </html>
