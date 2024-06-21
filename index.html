@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
   <title>∧° ┐ | creative, community space</title>
+
   <link rel="icon" href="icon/favicon.png" type="image/png">
   <link rel="icon" href="icon/android.png" sizes="192x192" type="image/png">
   <link rel="apple-touch-icon-precomposed" href="icon/ios.png" sizes="180x180" type="image/png">
   <link rel="stylesheet" href="icon/index.css" />
-  <link rel="stylesheet" href="index.css?v=0.00">
+  <link rel="stylesheet" href="index.css?v=0">
 
   <meta name="application-name" content="creative-community.space" />
   <meta name="msapplication-TileImage" content="icon/ios.png" />
@@ -21,7 +22,10 @@
   <meta name="msapplication-TileColor" content="#fff" />
 
   <script>
-    let jsArr = [
+    let news = "わたしたちは、実現したいことを快適に実現するための場所・環境をつくり、こ・こ・ろ・豊かな新しい生活を提案する団体です。 ",
+      speed = 400;
+
+    const jsArr = [
       ["motto", "p_motto"],
       ["motto", "e_motto"],
       ["motto", "h_motto"],
@@ -39,49 +43,84 @@
           document.getElementById('theme').checked = false;
           changeTheme()
         }
+      } else if (event.target.readyState === 'complete') {
+        headline()
       }
     }, false)
   </script>
-  <script src="index.js"></script>
+  <script src="index.js?=v0"></script>
   <script src="motto/index.js?=v0"></script>
 </head>
 
 <body>
   <nav>
-    <fieldset id="fontSize">
-      <input type="radio" id="Large" name="fontSize" value="Large" onchange="fontSize('20px')" />
-      <label style="font-size: 20px;" for="Large">大</label>
-      <input type="radio" id="Medium" name="fontSize" value="Medium" onchange="fontSize('16px')" checked />
-      <label style="font-size: 16px;" for="Medium">標準</label>
-      <input type="radio" id="Small" name="fontSize" value="Small" onchange="fontSize('12px')" />
-      <label style="font-size: 12px;" for="Small">小</label>
-    </fieldset>
+    <input type="button" id="news">
     <input type="checkbox" id="theme" onchange="changeTheme()">
     <label for="theme"></label>
   </nav>
 
-  <main id="random">
-    <h1 id="motto">
-      <span id="p">P E H U</span>
-      <span id="e"></span>
-      <span id="h"></span>
-      <span id="u">is</span>
-    </h1>
-    <div>
-      <h2>
-        We are The
-        <i>Community</i> to Trying
-        <i>Create</i>
-        The <i>Space</i>
-        to do the things that we want to do.
-      </h2>
-      <p class="jp">
-        わたしたちは、実現したいことを快適に実現するための場所・環境をつくり、こ・こ・ろ・豊かな新しい生活を提案する団体です。
-      </p>
-      <hr>
-      <h3 class="pehu">∧° ┐</h3>
-    </div>
-  </main>
+  <article>
+    <main id="random">
+      <h1 id="motto">
+        <span id="p">P E H U</span>
+        <span id="e"></span>
+        <span id="h"></span>
+        <span id="u">is</span>
+      </h1>
+      <div>
+        <h2>
+          We are The
+          <i>Community</i> to Trying
+          <i>Create</i>
+          The <i>Space</i>
+          to do the things that we want to do.
+        </h2>
+        <p class="jp">
+          わたしたちは、実現したいことを快適に実現するための場所・環境をつくり、こ・こ・ろ・豊かな新しい生活を提案する団体です。
+        </p>
+        <hr>
+        <h3 class="pehu">∧° ┐</h3>
+      </div>
+    </main>
+
+    <nav>
+      <ruby>
+        <rb>Work in Progress</rb>
+        <rt>進行中のプロジェクト</rt>
+      </ruby>
+      <fieldset id="size">
+        <input type="radio" id="Large" name="size" value="Large" onchange="thisSize('20px')" />
+        <label style="font-size: 20px;" for="Large">大</label>
+        <input type="radio" id="Medium" name="size" value="Medium" onchange="thisSize('16px')" checked />
+        <label style="font-size: 16px;" for="Medium">標準</label>
+        <input type="radio" id="Small" name="size" value="Small" onchange="thisSize('12px')" />
+        <label style="font-size: 12px;" for="Small">小</label>
+      </fieldset>
+    </nav>
+    <section>Comming Soon</section>
+    <details>
+      <summary>
+        <ruby>
+          <rb>Past & Present</rb>
+          <rt>これまでと現在</rt>
+        </ruby>
+      </summary>
+      <p>Comming Soon</p>
+    </details>
+  </article>
+
+  <footer>
+    <p>
+      <b>Email</b><br>
+      <u>pehu@creative-community.space</u>
+    </p>
+    <p>
+      <b>Links</b><br>
+      <a href="https://www.are.na/pe-hu/" target="_blank" rel="noopener noreferrer">Are.na</a>
+      <a href="https://www.instagram.com/pe_hu_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://twitter.com/pe_hu_" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </p>
+  </footer>
 </body>
 
 </html>

@@ -3,18 +3,29 @@ html {
   font-size: 16px;
 }
 
-body {
+body,
+fieldset {
   padding: 0;
   margin: 0;
+}
+
+hr,
+fieldset {
+  border: none;
 }
 
 * {
   box-sizing: border-box;
 }
 
-a {
-  color: #000;
+body,
+a,
+label[for="theme"]:after {
   transition: 1s;
+}
+
+a {
+  color: inherit;
 }
 
 a:hover {
@@ -41,6 +52,127 @@ a:hover {
   src: url("font/times.ttf");
 }
 
-.pehu {
+.pehu,
+label,
+#news {
   font-family: "MS Mincho", "SimSong", serif;
+}
+
+ruby,
+details summary {
+  font-family: "Arial", "Yu Gothic", sans-serif;
+}
+
+#news {
+  font-size: inherit;
+}
+
+nav {
+  display: flex;
+}
+
+nav {
+  position: sticky;
+  top: 1rem;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+nav,
+details {
+  padding: 0;
+  margin: 1rem;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=button] {
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+#news {
+  padding: 0.4rem;
+  margin: 0;
+  max-width: 70vw;
+}
+
+label[for="theme"] {
+  width: 3.21rem;
+  height: 2rem;
+  border-radius: 3.21rem;
+  position: relative;
+}
+
+label[for="theme"]:after {
+  content: '';
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+}
+
+#theme:checked+label[for="theme"]:after {
+  left: calc(100% - 0.25rem);
+  transform: translateX(-100%);
+}
+
+#size input[type=radio]:checked+label {
+  border-bottom: 0.2rem double;
+}
+
+[data-theme="light"] body,
+[data-theme="dark"] #news,
+[data-theme="dark"] label[for="theme"],
+[data-theme="light"] label[for="theme"]:after {
+  background: white;
+  color: black;
+}
+
+[data-theme="dark"] body,
+[data-theme="light"] #news,
+[data-theme="light"] label[for="theme"],
+[data-theme="dark"] label[for="theme"]:after {
+  background: #222;
+  color: white;
+}
+
+@media (prefers-color-scheme: light) {
+
+  body,
+  label[for="theme"]:after {
+    background: white;
+    color: black;
+  }
+
+  label[for="theme"],
+  #news {
+    background: #222;
+    color: white;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  body,
+  label[for="theme"]:after {
+    background: #222;
+    color: white;
+  }
+
+  label[for="theme"],
+  #news {
+    background: white;
+    color: black;
+  }
 }

@@ -45,10 +45,10 @@ function shuffleMotto(query, shuffleArr) {
 document.addEventListener('readystatechange', event => {
   if (event.target.readyState === 'interactive') {
     window.setInterval(function () {
-      randomMotto('#p', p_all);
-      randomMotto('#e', e_all);
-      randomMotto('#h', h_all);
-      randomMotto('#u', u_all);
-    }, 4444);
+      randomMotto('#p', p_all)
+      randomMotto('#e', e_all)
+      randomMotto('#h', h_all)
+      randomMotto('#u', u_all)
+    }, 4444)
   }
 }, false)

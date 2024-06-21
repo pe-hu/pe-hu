@@ -6,23 +6,41 @@
 #random #motto span::after,
 #all dd {
   font-family: "MS Mincho", "SimSong", serif;
-  font-weight: 400;
 }
 
 h1,
-#all h2,
+#all h2 a,
+#all h2 i,
 #all dt {
-  font-family: "Times New Roman", serif;
+  font-family: "Times New Roman", "Times", serif;
+}
+
+#all h2 span {
+  font-family: "Arial", "Yu Gothic", sans-serif;
+}
+
+h1,
+#all h2 {
   font-weight: 400;
 }
 
-#random #motto,
-#all dt {
+#random #motto {
   font-size: 200%;
 }
 
-#all h2 a {
+#all h2 a,
+#all dt {
   font-size: 150%;
+}
+
+#all h2,
+#all h2 i {
+  font-size: 111%;
+}
+
+#all dt i {
+  font-size: 50%;
+  text-decoration: red 1px underline wavy;
 }
 
 #random,
@@ -31,19 +49,15 @@ h1,
   width: 100%;
 }
 
-#random,
-#all {
-  height: 100vh;
+#random {
+  display: grid;
+  place-items: center;
+  height: calc(100vh - 5rem);
   max-height: -webkit-fill-available;
 }
 
 #random,
-#all {
-  display: grid;
-}
-
-#random {
-  place-items: center;
+#all h2 {
   padding: 1rem;
 }
 
@@ -52,7 +66,7 @@ h1,
 }
 
 #random #motto span:hover {
-  text-decoration: underline;
+  text-decoration: red 2px underline wavy;
 }
 
 #random #motto span:hover::after {
@@ -67,28 +81,26 @@ h1,
   width: 75%;
 }
 
-#all h2 {
-  padding: 1rem;
-  font-size: 125%;
-  font-weight: 400;
-}
-
 #all section,
 #all section dl {
   overflow: auto;
 }
 
+#all,
 #all section {
   display: flex;
-  place-items: end;
+}
+
+#all {
+  flex-flow: column;
+  height: 750px;
+  max-height: 75vh;
 }
 
 #all section dl {
-  font-size: 75%;
   padding: 0 1rem 0.5rem;
   width: 25%;
   min-width: 250px;
-  height: calc(100vh - 12.5rem);
 }
 
 #all dt i {
@@ -100,7 +112,7 @@ h1,
   margin-bottom: 0.5rem;
 }
 
-@media screen and (max-width: 550px) {
+@media (max-width: 550px) {
   #random #motto span {
     display: block;
     font-size: 125%;
@@ -109,7 +121,6 @@ h1,
 
   #all section dl {
     min-width: 70vw;
-    height: calc(100vh - 50vw);
   }
 }
 

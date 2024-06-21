@@ -16,8 +16,10 @@ async function fetchHTML(url = '', query = '') {
     });
 }
 
-function fontSize(px) {
-  document.body.style.fontSize = px;
+function headline() {
+  news = news.substring(2, news.length) + news.substring(0, 2)
+  document.querySelector('#news').value = news;
+  setTimeout("headline()", speed)
 }
 
 function changeTheme() {
@@ -26,4 +28,8 @@ function changeTheme() {
   } else {
     document.documentElement.setAttribute('data-theme', 'light')
   }
+}
+
+function thisSize(px) {
+  document.body.style.fontSize = px;
 }

@@ -1,11 +1,11 @@
 h2,
-fieldset {
+footer p {
     padding: 0;
     margin: 0;
 }
 
 #random,
-nav {
+footer {
     display: flex;
 }
 
@@ -14,105 +14,17 @@ nav {
     place-items: center;
 }
 
-nav {
-    position: sticky;
-    top: 0;
-    gap: 1rem;
-    justify-content: space-between;
+#random h1,
+#random h2 i {
+    font-family: "Times New Roman", "Times", serif;
 }
 
-input[type=radio],
-input[type=checkbox] {
-    display: none;
-}
-
-label {
-    cursor: pointer;
-}
-
-label[for="theme"] {
-    width: 4rem;
-    height: 2rem;
-    border-radius: 4rem;
-    position: relative;
-}
-
-label[for="theme"]:after {
-    content: '';
-    position: absolute;
-    top: 0.25rem;
-    left: 0.25rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 1.5rem;
-    transition: 0.5s;
-}
-
-#fontSize {
-    margin-top: 0.25rem;
-}
-
-#fontSize input[type=radio]:checked+label {
-    border-bottom: 0.2rem double;
-}
-
-#theme:checked+label[for="theme"]:after {
-    left: calc(100% - 0.25rem);
-    transform: translateX(-100%);
-}
-
-[data-theme="light"] body,
-[data-theme="dark"] label[for="theme"],
-[data-theme="light"] label[for="theme"]:after {
-    background: white;
-    color: black;
-}
-
-[data-theme="dark"] body,
-[data-theme="light"] label[for="theme"],
-[data-theme="dark"] label[for="theme"]:after {
-    background: #222;
-    color: white;
-}
-
-@media (prefers-color-scheme: light) {
-
-    body,
-    label[for="theme"]:after {
-        background: white;
-        color: black;
-    }
-
-    label[for="theme"] {
-        background: #222;
-        color: white;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-
-    body,
-    label[for="theme"]:after {
-        background: #222;
-        color: white;
-    }
-
-    label[for="theme"] {
-        background: white;
-        color: black;
-    }
-}
-
-
-#random h1 {
-    font-family: "Times New Roman", serif;
-}
-
-#random h2 {
+#random h2,
+article,
+footer {
     font-family: "Arial", "Yu Gothic", sans-serif;
 }
 
-#fontSize,
 .jp {
     font-family: "MS Mincho", "SimSong", serif;
 }
@@ -128,12 +40,15 @@ h3.pehu {
     font-weight: 400;
 }
 
+ruby {
+    font-size: 125%;
+}
+
 #random h2 {
     line-height: 150%;
 }
 
 #random h2 i {
-    font-family: "Times New Roman", "MS Mincho", "SimSong", serif;
     font-size: 111%;
 }
 
@@ -142,11 +57,14 @@ h3.pehu {
     line-height: 175%;
 }
 
-header,
-footer,
-nav,
 #random h1,
-#random div {
+#random div,
+article section {
+    padding: 1rem;
+}
+
+footer {
+    gap: 1rem;
     padding: 1rem;
 }
 
@@ -154,19 +72,36 @@ nav,
     margin: 1rem 0;
 }
 
-hr,
-fieldset {
-    border: none;
+article section {
+    border: solid 1px;
+    border-radius: 1rem;
+    width: calc(100% - 2rem);
+    margin: auto;
 }
 
-@media (min-width: 975px) {
+summary {
+    border-bottom: 1px solid;
+}
+
+summary::marker {
+    content: '☞ ';
+    font-size: 150%;
+}
+
+details[open] summary::marker {
+    content: '☟ ';
+}
+
+/* デバイスが横向きの場合の記述 */
+@media (orientation: landscape) {
     #random {
         flex-flow: row;
         min-height: calc(100vh - 7.5rem);
     }
 
     #random h1,
-    #random div {
+    #random div,
+    footer p {
         flex: 1;
     }
 
@@ -179,16 +114,20 @@ fieldset {
     }
 }
 
-@media (max-width: 975px) {
-    #random {
-        flex-flow: column-reverse;
+/* デバイスが縦向きの場合の記述 */
+@media (orientation: portrait) {
+
+    footer {
+        flex-flow: column;
     }
 
-    #random h1 {
-        margin: 2.5rem 0;
+    #random {
+        flex-flow: column-reverse;
+        margin-bottom: 5rem;
     }
 
     h3.pehu {
         font-size: 20vw;
+        margin: 27.5vw 0;
     }
 }
