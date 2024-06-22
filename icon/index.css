@@ -4,7 +4,8 @@ html {
 }
 
 body,
-fieldset {
+fieldset,
+footer p {
   padding: 0;
   margin: 0;
 }
@@ -29,7 +30,19 @@ a {
 }
 
 a:hover {
-  color: blue;
+  color: red;
+}
+
+article,
+footer {
+  position: relative;
+}
+
+#back {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  text-decoration: none;
 }
 
 @font-face {
@@ -44,7 +57,7 @@ a:hover {
 
 @font-face {
   font-family: "SimSong";
-  src: url("font/SimSong.ttc");
+  src: url("font/SimSun.ttc");
 }
 
 @font-face {
@@ -58,8 +71,11 @@ label,
   font-family: "MS Mincho", "SimSong", serif;
 }
 
-ruby,
-details summary {
+#back {
+  font-family: "Times New Roman", "MS Mincho", "SimSong", serif;
+}
+
+footer {
   font-family: "Arial", "Yu Gothic", sans-serif;
 }
 
@@ -67,7 +83,8 @@ details summary {
   font-size: inherit;
 }
 
-nav {
+nav,
+footer {
   display: flex;
 }
 
@@ -76,6 +93,26 @@ nav {
   top: 1rem;
   gap: 1rem;
   justify-content: space-between;
+  z-index: 100;
+}
+
+footer {
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* デバイスが横向きの場合の記述 */
+@media (orientation: landscape) {
+  footer p {
+    flex: 1;
+  }
+}
+
+/* デバイスが縦向きの場合の記述 */
+@media (orientation: portrait) {
+  footer {
+    flex-flow: column;
+  }
 }
 
 nav,

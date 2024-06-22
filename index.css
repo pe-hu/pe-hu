@@ -1,27 +1,26 @@
-h2,
-footer p {
-    padding: 0;
-    margin: 0;
+body {
+    overflow-x: hidden;
 }
 
-#random,
-footer {
+#top,
+details p {
     display: flex;
 }
 
-#random h1 {
+#top h1 {
     display: grid;
     place-items: center;
 }
 
-#random h1,
-#random h2 i {
+#top h1,
+#top h2 i {
     font-family: "Times New Roman", "Times", serif;
 }
 
-#random h2,
-article,
-footer {
+#top h2,
+ruby,
+article section,
+details {
     font-family: "Arial", "Yu Gothic", sans-serif;
 }
 
@@ -34,21 +33,18 @@ h3.pehu {
     font-weight: 400;
 }
 
-#random h1,
-#random h2 {
+#top h1,
+#top h2 {
     font-size: 200%;
     font-weight: 400;
 }
 
-ruby {
+ruby,
+details p a {
     font-size: 125%;
 }
 
-#random h2 {
-    line-height: 150%;
-}
-
-#random h2 i {
+#top h2 i {
     font-size: 111%;
 }
 
@@ -57,26 +53,22 @@ ruby {
     line-height: 175%;
 }
 
-#random h1,
-#random div,
-article section {
+#top h2 {
+    line-height: 150%;
+}
+
+#top h1,
+#top div {
     padding: 1rem;
 }
 
-footer {
-    gap: 1rem;
-    padding: 1rem;
-}
-
-#random h1 span {
+#top h1 span {
     margin: 1rem 0;
 }
 
-article section {
-    border: solid 1px;
-    border-radius: 1rem;
+#now {
+    margin: 0 auto 2rem;
     width: calc(100% - 2rem);
-    margin: auto;
 }
 
 summary {
@@ -92,20 +84,29 @@ details[open] summary::marker {
     content: '☟ ';
 }
 
+details p {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+details p a {
+    display: block;
+    width: 100%;
+}
+
 /* デバイスが横向きの場合の記述 */
 @media (orientation: landscape) {
-    #random {
+    #top {
         flex-flow: row;
         min-height: calc(100vh - 7.5rem);
     }
 
-    #random h1,
-    #random div,
-    footer p {
+    #top h1,
+    #top div {
         flex: 1;
     }
 
-    #random h1 {
+    #top h1 {
         margin: auto;
     }
 
@@ -116,12 +117,7 @@ details[open] summary::marker {
 
 /* デバイスが縦向きの場合の記述 */
 @media (orientation: portrait) {
-
-    footer {
-        flex-flow: column;
-    }
-
-    #random {
+    #top {
         flex-flow: column-reverse;
         margin-bottom: 5rem;
     }

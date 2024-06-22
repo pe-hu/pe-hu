@@ -1,0 +1,32 @@
+{
+    "archive": [
+        {
+            "from": "2020.06.27",
+            "to": "2021.01.30",
+            "title": "プレイタイムズ | praytimes.pe.hu",
+            "href": "https://praytimes.pe.hu/",
+            "target": "_blank"
+        },
+        {
+            "from": "2019.4.11",
+            "to": "2022.3.30",
+            "title": "音ビル | OTO Building",
+            "href": "https://vg.pe.hu/2019-2021/",
+            "target": "_blank"
+        },
+        {
+            "from": "2019.1.6",
+            "to": "2019.9.15",
+            "title": "2019 | creative, community space",
+            "href": "https://vg.pe.hu/jp/",
+            "target": "_blank"
+        },
+        {
+            "from": "2017.12.16",
+            "to": "2018.4.30",
+            "title": "1F | gallery, community space",
+            "href": "https://vg.pe.hu/1f/",
+            "target": "_blank"
+        }
+    ]
+}

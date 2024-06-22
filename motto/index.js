@@ -16,30 +16,11 @@ function getRandom(randomArray) {
 }
 
 function randomMotto(query, thisArr) {
-  const eachArr = getRandom(Object.entries(thisArr));
+  const eachArr = getRandom(Object.entries(thisArr))
   const thisMotto = document.querySelector(query)
   thisMotto.innerText = eachArr[0];
-  thisMotto.setAttribute('lang', Object.values(eachArr[1])[0]);
-  thisMotto.setAttribute('value', Object.values(eachArr[1])[1]);
-}
-
-function shuffle(arrays) {
-  const array = arrays.slice();
-  for (let i = array.length - 1; i >= 0; i--) {
-    const shuffleArr = Math.floor(Math.random() * (i + 1));
-    [array[i], array[shuffleArr]] = [array[shuffleArr], array[i]];
-  }
-  return array;
-}
-
-function shuffleMotto(query, shuffleArr) {
-  const shuffleAll = shuffle(Object.entries(shuffleArr));
-  shuffleAll.forEach((shuffleEach) => {
-    document.querySelector(query).innerHTML += `
-    <dt><i>${Object.values(shuffleEach[1])[0]}</i><br/>${shuffleEach[0]}</dt>
-    <dd>${Object.values(shuffleEach[1])[1]}</dd>
-    `;
-  })
+  thisMotto.setAttribute('lang', Object.values(eachArr[1])[0])
+  thisMotto.setAttribute('value', Object.values(eachArr[1])[1])
 }
 
 document.addEventListener('readystatechange', event => {
@@ -50,5 +31,32 @@ document.addEventListener('readystatechange', event => {
       randomMotto('#h', h_all)
       randomMotto('#u', u_all)
     }, 4444)
+  } else if (event.target.readyState === 'complete') {
+    const mottoAll = document.querySelectorAll('#motto span')
+    for (const mottoEach of mottoAll) {
+      mottoEach.addEventListener('click', function () {
+        const uttr = new SpeechSynthesisUtterance()
+        uttr.text = this.innerText;
+        uttr.lang = this.lang;
+        uttr.rate = 0.75;
+        speechSynthesis.speak(uttr)
+      }, false)
+    }
   }
 }, false)
+
+function allArr(query, arrAll) {
+  Object.entries(arrAll).forEach((shuffleEach) => {
+    document.querySelector(query).innerHTML += `
+    <dt><i>${Object.values(shuffleEach[1])[0]}</i><br/>${shuffleEach[0]}</dt>
+    <dd>${Object.values(shuffleEach[1])[1]}</dd>
+    `;
+  })
+}
+
+function shuffAll() {
+  allArr('#p_motto', p_all)
+  allArr('#e_motto', e_all)
+  allArr('#h_motto', h_all)
+  allArr('#u_motto', u_all)
+}

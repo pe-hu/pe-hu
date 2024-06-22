@@ -1,39 +1,27 @@
-main,
-canvas,
-p {
-    padding: 0;
-    margin: 0;
-}
-
-header,
-main section {
-    padding: 0.5rem;
-}
-
-footer,
-main pre {
-    padding: 1rem;
-}
-
-hr {
-    border: none;
-}
-
-canvas {
-    background: #fff;
-}
-
-canvas {
-    border: #000 solid 1px;
-    max-width: 100%;
-    max-height: 100%;
-}
-
 #logo {
     display: flex;
     flex-flow: wrap;
     align-items: flex-start;
     justify-content: space-between;
+    position: relative;
+}
+
+#logo pre {
+    padding: 1rem;
+}
+
+#logo section canvas {
+    background: #fff;
+}
+
+#logo section canvas {
+    border: #000 solid 1px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#logo section {
+    padding: 1rem;
 }
 
 @page {
@@ -41,12 +29,12 @@ canvas {
 }
 
 @media print {
-    main section {
+    #logo section {
         break-inside: avoid;
     }
 }
 
-main section p {
+#logo section b {
     display: none;
     position: absolute;
     font-size: 90%;
@@ -54,16 +42,16 @@ main section p {
     user-select: none;
 }
 
-main section:hover p {
+#logo section:hover b {
     display: block;
 }
 
-main section small {
+#logo section small {
     background: #000;
     color: #fff;
 }
 
-main pre {
+#logo pre {
     box-sizing: border-box;
     font-family: inherit;
     overflow: auto;

@@ -9,44 +9,19 @@
 
   <link rel="icon" href="../icon/favicon.png" type="image/png">
   <link rel="stylesheet" href="../icon/index.css?=v1" />
+  <link rel="stylesheet" href="../index.css?v=1">
   <link rel="stylesheet" href="style.css?=v1" />
+
   <script>
+    let news = "P E H U から始まる、ペフに似合う言葉を集めています。 ",
+      speed = 400;
+
     let jsArr = [
       ["../motto", "p_motto"],
       ["../motto", "e_motto"],
       ["../motto", "h_motto"],
       ["../motto", "u_motto"]
     ]
-
-    document.addEventListener('readystatechange', event => {
-      if (event.target.readyState === 'interactive') {
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          /* ダークテーマの時 */
-          document.getElementById('theme').checked = true;
-          changeTheme()
-        } else {
-          /* ライトテーマの時 */
-          document.getElementById('theme').checked = false;
-          changeTheme()
-        }
-      } else if (event.target.readyState === 'complete') {
-        shuffleMotto('#p_motto', p_all)
-        shuffleMotto('#e_motto', e_all)
-        shuffleMotto('#h_motto', h_all)
-        shuffleMotto('#u_motto', u_all)
-
-        const mottoAll = document.querySelectorAll('#motto span')
-        for (const mottoEach of mottoAll) {
-          mottoEach.addEventListener('click', function () {
-            const uttr = new SpeechSynthesisUtterance();
-            uttr.text = this.innerText;
-            uttr.lang = this.lang;
-            uttr.rate = 0.75;
-            speechSynthesis.speak(uttr);
-          }, false)
-        }
-      }
-    }, false)
   </script>
   <script type="text/javascript" src="index.js?=v1"></script>
   <script type="text/javascript" src="../index.js?=v1"></script>
@@ -54,46 +29,54 @@
 
 <body>
   <nav>
-    <fieldset id="size">
-      <input type="radio" id="Large" name="size" value="Large" onchange="thisSize('20px')" />
-      <label style="font-size: 20px;" for="Large">大</label>
-      <input type="radio" id="Medium" name="size" value="Medium" onchange="thisSize('16px')" checked />
-      <label style="font-size: 16px;" for="Medium">標準</label>
-      <input type="radio" id="Small" name="size" value="Small" onchange="thisSize('12px')" />
-      <label style="font-size: 12px;" for="Small">小</label>
-    </fieldset>
-
+    <input type="button" id="news">
     <input type="checkbox" id="theme" onchange="changeTheme()">
     <label for="theme"></label>
   </nav>
 
-  <main id="random">
-    <h1 id="motto">
-      <span id="p">P E H U</span>
-      <span id="e"></span>
-      <span id="h"></span>
-      <span id="u">is</span>
-    </h1>
-  </main>
+  <article>
+    <main id="random">
+      <h1 id="motto">
+        <span id="p">P E H U</span>
+        <span id="e"></span>
+        <span id="h"></span>
+        <span id="u">is</span>
+      </h1>
+      <a onclick="history.back()" id="back" style="font-size: 150%;">←</a>
+    </main>
+    <nav>
+      <fieldset id="size">
+        <input type="radio" id="Large" name="size" value="Large" onchange="thisSize('20px')" />
+        <label style="font-size: 20px;" for="Large">大</label>
+        <input type="radio" id="Medium" name="size" value="Medium" onchange="thisSize('16px')" checked />
+        <label style="font-size: 16px;" for="Medium">標準</label>
+        <input type="radio" id="Small" name="size" value="Small" onchange="thisSize('12px')" />
+        <label style="font-size: 12px;" for="Small">小</label>
+      </fieldset>
+    </nav>
+    <section id="all">
+      <dl id="p_motto"></dl>
+      <dl id="e_motto"></dl>
+      <dl id="h_motto"></dl>
+      <dl id="u_motto"></dl>
+      <script>
+        window.addEventListener('load', shuffAll)
+      </script>
+    </section>
+  </article>
 
-  <article id="all">
-    <h2>
-      <span>Please let me know if you found some stand for</span>
+  <footer>
+    <p>
+      Please let me know if you found some stand for
       <i>P E H U</i>
-      <br />
+      <br>
       <a href="https://www.are.na/pe-hu/p-e-h-u-is" target="_blank" rel="noopener noreferrer">Are.na</a>
       <a
         href="mailto:pehu@creative-community.space?subject=P%20E%20H%20U%20is%20|%20Motto&amp;body=P%0d%0aE%0d%0aH%0d%0aU%0d%0a">
         Email
       </a>
-    </h2>
-    <section>
-      <dl id="p_motto"></dl>
-      <dl id="e_motto"></dl>
-      <dl id="h_motto"></dl>
-      <dl id="u_motto"></dl>
-    </section>
-  </article>
+    </p>
+  </footer>
 </body>
 
 </html>

@@ -7,55 +7,153 @@
   <meta name="format-detection" content="telephone=no" />
   <title>We are | わたしたちは、クリエイティブ・コミュニティスペース ペフ</title>
   <link rel="icon" href="../icon/favicon.png" type="image/png">
-  <link rel="stylesheet" href="../icon/index.css?v1" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../icon/index.css?v=1" />
+  <link rel="stylesheet" href="../index.css?v=1">
+  <link rel="stylesheet" href="style.css?v=1" />
+
+  <script src="../index.js?v=1"></script>
+  <script>
+    let news = "わたしたちは、クリエイティブ・コミュニティスペース ペフ です。 ",
+      speed = 400;
+
+    const jsArr = [
+      ["../motto", "p_motto"],
+      ["../motto", "e_motto"],
+      ["../motto", "h_motto"],
+      ["../motto", "u_motto"]
+    ]
+
+    // indexJSON()
+    async function weare(requestURL) {
+      const request = new Request(requestURL)
+      const response = await fetch(request)
+      const jsonIndex = await response.text()
+      const index = JSON.parse(jsonIndex)
+      thisWork(index)
+    }
+
+    function thisWork(obj) {
+      const works = document.querySelector('#works')
+      const title = document.querySelector('#works h1 ruby rb')
+      const ruby = document.querySelector('#works h1 ruby rt')
+
+      title.textContent = obj.title;
+      ruby.textContent = obj.ruby;
+      works.style.backgroundImage = `url(${obj.img[0]})`
+    }
+
+    // ?id=ID
+    let params = new URLSearchParams(location.search)
+    if (params.get("id")) {
+      weare(params.get("id") + ".json")
+      addEventListener("load", (event) => {
+        const mainAll = document.querySelectorAll("main")
+        for (const main of mainAll) {
+          if (main.hidden === true) {
+            main.hidden = false;
+          } else if (main.hidden === false) {
+            main.hidden = true;
+          }
+        }
+      }, false)
+    }
+  </script>
 </head>
 
 <body>
-  <article id="weare">
-    <section>
-      <h1>
-        We are The
-        <a>Peace Piece</a><br />
-        Preservation Society<br />
-        God save<br>
-        <a>Peace for Future</a> that<br />
-        all the different varieties
-      </h1>
-      <p class="jp">
-        わたしたちは、平和のかけらを守る会<br />
-        神様、あらゆる種類の未来のために平和をお守りください
-      </p>
-      <hr />
-      <h2>
-        We are The
-        <a>Own Values</a><br />
-        Appreciation Society<br />
-        God save
-        <a>Your Choice</a><br />
-        and
-        <i>Any Other Choices</i>
-      </h2>
-      <p class="jp">
-        わたしたちは、大切にすることを大切にする団体<br />
-        神様、あなたの選択とその他の選択をお守りください
-      </p>
-      <hr />
-      <p>
-        Preserving the old ways from being abused<br />
-        Protecting the new ways for me and for you<br />
-        What more can we do
-      </p>
-      <hr />
-      <h2>
-        We are<br>
-        <small class="pehu">
-          creative, community space ∧°┐
-        </small>
-      </h2>
-      <p class="jp">わたしたちは、クリエイティブ・コミュニティスペース　ペフ</p>
-    </section>
+  <nav>
+    <input type="button" id="news">
+    <input type="checkbox" id="theme" onchange="changeTheme()">
+    <label for="theme"></label>
+  </nav>
+
+  <article>
+    <main id="weare">
+      <section>
+        <strong>
+          We are The
+          <a>Peace Piece</a><br />
+          Preservation Society<br />
+          God save<br>
+          <a>Peace for Future</a> that<br />
+          all the different varieties
+        </strong>
+        <p class="jp">
+          わたしたちは、平和のかけらを守る会<br />
+          神様、あらゆる種類の未来のために平和をお守りください
+        </p>
+        <hr />
+        <strong>
+          We are The
+          <a>Own Values</a><br />
+          Appreciation Society<br />
+          God save
+          <a>Your Choice</a><br />
+          and
+          <i>Any Other Choices</i>
+        </strong>
+        <p class="jp">
+          わたしたちは、大切にすることを大切にする団体<br />
+          神様、あなたの選択とその他の選択をお守りください
+        </p>
+        <hr />
+        <p>
+          Preserving the old ways from being abused<br />
+          Protecting the new ways for me and for you<br />
+          What more can we do
+        </p>
+        <hr />
+        <strong>
+          We are<br>
+          <small class="pehu">
+            creative, community space ∧°┐
+          </small>
+        </strong>
+        <p class="jp">わたしたちは、クリエイティブ・コミュニティスペース　ペフ</p>
+      </section>
+    </main>
+
+    <main id="works" hidden>
+      <nav>
+        <h1>
+          <ruby>
+            <rb>We are</rb>
+            <rt>わたしたち</rt>
+          </ruby>
+        </h1>
+        <fieldset id="size">
+          <input type="radio" id="Large" name="size" value="Large" onchange="thisSize('20px')" />
+          <label style="font-size: 20px;" for="Large">大</label>
+          <input type="radio" id="Medium" name="size" value="Medium" onchange="thisSize('16px')" checked />
+          <label style="font-size: 16px;" for="Medium">標準</label>
+          <input type="radio" id="Small" name="size" value="Small" onchange="thisSize('12px')" />
+          <label style="font-size: 12px;" for="Small">小</label>
+        </fieldset>
+      </nav>
+      <section>←</section>
+      <section>→</section>
+    </main>
+
+    <details id="details">
+      <summary>
+        <ruby>
+          <rb>More Detail</rb>
+          <rt>もっと詳しく</rt>
+        </ruby>
+      </summary>
+      <section>
+        <p>わたしたちは、クリエイティブ・コミュニティスペース ペフ です。</p>
+      </section>
+    </details>
   </article>
+
+  <footer>
+    <p>
+      <b>Email</b><br>
+      <u>pehu[at]creative-community.space</u>
+    </p>
+    <a onclick="history.back()" id="back" style="font-size: 150%;">🔙</a>
+  </footer>
 </body>
 
 </html>
