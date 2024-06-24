@@ -13,10 +13,14 @@
 }
 
 #works {
+  transition: 1s;
   display: flex;
-  min-height: calc(100vh - 4.5rem);
-  background-position: center;
-  background-size: auto 100%;
+  height: 75vh;
+  overflow: auto;
+}
+
+#works img {
+  height: 100%;
 }
 
 #works nav {
@@ -25,30 +29,42 @@
   width: calc(100% - 2rem);
 }
 
-#works section {
-  color: transparent;
-  display: grid;
-  place-content: center;
-  flex: auto 1;
-}
-
-#works section:hover {
-  color: inherit;
-  cursor: pointer;
-}
-
 #weare[hidden],
 #works[hidden] {
   display: none;
 }
 
 
+[data-theme="light"] #works nav {
+  filter: invert();
+  mix-blend-mode: exclusion;
+}
+
+[data-theme="dark"] #works nav {
+  filter: invert(0);
+  mix-blend-mode: exclusion;
+}
+
+@media (prefers-color-scheme: light) {
+  #works nav {
+    filter: invert();
+    mix-blend-mode: exclusion;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #works nav {
+    filter: invert(0);
+    mix-blend-mode: exclusion;
+  }
+}
+
 /* デバイスが横向きの場合の記述 */
 @media (orientation: landscape) {
   #weare {
     font-size: 3vh;
     width: 100%;
-    height: calc(100vh - 5rem);
+    height: calc(100vh - 6rem);
     max-height: -webkit-fill-available;
   }
 
@@ -105,6 +121,15 @@
 
 #works h1 {
   font-size: 150%;
+}
+
+footer b {
+  width: 100%;
+}
+
+footer a {
+  font-size: 111%;
+  line-height: 150%;
 }
 
 #weare section p {

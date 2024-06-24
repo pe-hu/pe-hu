@@ -13,7 +13,7 @@ footer p {
 
 body,
 article {
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -101,6 +101,7 @@ nav {
 }
 
 footer {
+  flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
 }
@@ -123,6 +124,7 @@ nav,
 details {
   padding: 0;
   margin: 1rem;
+  width: calc(100% - 2rem);
 }
 
 label {

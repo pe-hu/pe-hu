@@ -18,7 +18,7 @@ function getRandom(randomArray) {
 function randomMotto(query, thisArr) {
   const eachArr = getRandom(Object.entries(thisArr))
   const thisMotto = document.querySelector(query)
-  thisMotto.innerText = eachArr[0];
+  thisMotto.innerText = eachArr[0]
   thisMotto.setAttribute('lang', Object.values(eachArr[1])[0])
   thisMotto.setAttribute('value', Object.values(eachArr[1])[1])
 }

@@ -5,7 +5,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
-  <title>We are | わたしたちは、クリエイティブ・コミュニティスペース ペフ</title>
+  <title>We are creative, community space ∧°┐</title>
+  <meta content="We are creative, community space ∧°┐" property="og:title">
+  <meta content="わたしたちは、クリエイティブ・コミュニティスペース ペフ です。" name="description">
+  <meta content="わたしたちは、クリエイティブ・コミュニティスペース ペフ です。" property="og:description">
+
   <link rel="icon" href="../icon/favicon.png" type="image/png">
   <link rel="stylesheet" href="../icon/index.css?v=1" />
   <link rel="stylesheet" href="../index.css?v=1">
@@ -15,49 +19,8 @@
   <script>
     let news = "わたしたちは、クリエイティブ・コミュニティスペース ペフ です。 ",
       speed = 400;
-
-    const jsArr = [
-      ["../motto", "p_motto"],
-      ["../motto", "e_motto"],
-      ["../motto", "h_motto"],
-      ["../motto", "u_motto"]
-    ]
-
-    // indexJSON()
-    async function weare(requestURL) {
-      const request = new Request(requestURL)
-      const response = await fetch(request)
-      const jsonIndex = await response.text()
-      const index = JSON.parse(jsonIndex)
-      thisWork(index)
-    }
-
-    function thisWork(obj) {
-      const works = document.querySelector('#works')
-      const title = document.querySelector('#works h1 ruby rb')
-      const ruby = document.querySelector('#works h1 ruby rt')
-
-      title.textContent = obj.title;
-      ruby.textContent = obj.ruby;
-      works.style.backgroundImage = `url(${obj.img[0]})`
-    }
-
-    // ?id=ID
-    let params = new URLSearchParams(location.search)
-    if (params.get("id")) {
-      weare(params.get("id") + ".json")
-      addEventListener("load", (event) => {
-        const mainAll = document.querySelectorAll("main")
-        for (const main of mainAll) {
-          if (main.hidden === true) {
-            main.hidden = false;
-          } else if (main.hidden === false) {
-            main.hidden = true;
-          }
-        }
-      }, false)
-    }
   </script>
+  <script src="index.js?v=1"></script>
 </head>
 
 <body>
@@ -68,6 +31,25 @@
   </nav>
 
   <article>
+    <main id="works" hidden>
+      <nav>
+        <h1>
+          <ruby>
+            <rb>We are</rb>
+            <rt>わたしたち</rt>
+          </ruby>
+        </h1>
+        <fieldset id="size">
+          <input type="radio" id="Large" name="size" value="Large" onchange="sizeHight('20px', '90vh')" />
+          <label style="font-size: 20px;" for="Large">大</label>
+          <input type="radio" id="Medium" name="size" value="Medium" onchange="sizeHight('16px', '75vh')" checked />
+          <label style="font-size: 16px;" for="Medium">標準</label>
+          <input type="radio" id="Small" name="size" value="Small" onchange="sizeHight('12px', '50vh')" />
+          <label style="font-size: 12px;" for="Small">小</label>
+        </fieldset>
+      </nav>
+    </main>
+
     <main id="weare">
       <section>
         <strong>
@@ -113,28 +95,7 @@
       </section>
     </main>
 
-    <main id="works" hidden>
-      <nav>
-        <h1>
-          <ruby>
-            <rb>We are</rb>
-            <rt>わたしたち</rt>
-          </ruby>
-        </h1>
-        <fieldset id="size">
-          <input type="radio" id="Large" name="size" value="Large" onchange="thisSize('20px')" />
-          <label style="font-size: 20px;" for="Large">大</label>
-          <input type="radio" id="Medium" name="size" value="Medium" onchange="thisSize('16px')" checked />
-          <label style="font-size: 16px;" for="Medium">標準</label>
-          <input type="radio" id="Small" name="size" value="Small" onchange="thisSize('12px')" />
-          <label style="font-size: 12px;" for="Small">小</label>
-        </fieldset>
-      </nav>
-      <section>←</section>
-      <section>→</section>
-    </main>
-
-    <details id="details">
+    <details id="details" hidden>
       <summary>
         <ruby>
           <rb>More Detail</rb>
@@ -148,10 +109,6 @@
   </article>
 
   <footer>
-    <p>
-      <b>Email</b><br>
-      <u>pehu[at]creative-community.space</u>
-    </p>
     <a onclick="history.back()" id="back" style="font-size: 150%;">🔙</a>
   </footer>
 </body>
