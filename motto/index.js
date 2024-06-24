@@ -4,14 +4,14 @@ switch (document.readyState) {
   case "loading":
     jsArr.forEach(function (thisJS) {
       const js = document.createElement('script')
-      js.src = thisJS[0] + '/' + thisJS[1] + '.js?d=' + new Date();
-      document.head.appendChild(js);
+      js.src = thisJS[0] + '/' + thisJS[1] + '.js?d=' + new Date()
+      document.head.appendChild(js)
     }, false)
     break;
 }
 
 function getRandom(randomArray) {
-  let random = randomArray[Math.floor(Math.random() * randomArray.length)];
+  let random = randomArray[Math.floor(Math.random() * randomArray.length)]
   return random;
 }
 

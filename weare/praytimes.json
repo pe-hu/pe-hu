@@ -1,0 +1,38 @@
+{
+    "title": "プレイタイムズ",
+    "ruby": "2020.06.27 - 2021.01.30",
+    "description": "BnA Alter Museum SCG (Stair Case Gallery) にて開催された特別企画展で、現代美術作品「プレイタイムズ」を発表しました。",
+    "img": [
+        "https://praytimes.pe.hu/live/cover.jpeg",
+        "https://praytimes.pe.hu/inn/img/000.JPG",
+        "https://praytimes.pe.hu/inn/img/004.JPG",
+        "https://praytimes.pe.hu/2020/0308/cover.jpeg",
+        "https://praytimes.pe.hu/2020/0405/cover.jpeg",
+        "https://praytimes.pe.hu/2020/0503/cover.jpeg",
+        "https://praytimes.pe.hu/2020/0607/cover.jpeg",
+        "https://praytimes.pe.hu/2020/0705/cover.jpeg",
+        "https://praytimes.pe.hu/2020/0802/cover.jpeg",
+        "https://praytimes.pe.hu/2020/0906/cover.jpeg",
+        "https://praytimes.pe.hu/2020/1004/cover.jpeg",
+        "https://praytimes.pe.hu/2020/1101/cover.jpeg",
+        "https://praytimes.pe.hu/2020/1206/cover.jpeg",
+        "https://praytimes.pe.hu/inn/pieces/000.JPG",
+        "https://praytimes.pe.hu/inn/img/017.JPG",
+        "https://praytimes.pe.hu/inn/peace/000.JPG"
+    ],
+    "details": [
+        "__"
+    ],
+    "links": [
+        {
+            "href": "https://praytimes.pe.hu/",
+            "target": "_blank",
+            "text": "プレイタイムズ | praytimes.pe.hu"
+        },
+        {
+            "href": "https://bnaaltermuseum.com/exhibition/the-technique-of-optimism/",
+            "target": "_blank",
+            "text": "The Technique of Optimism | Exhibition | BnA Alter Museum"
+        }
+    ]
+}

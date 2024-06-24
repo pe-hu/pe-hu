@@ -41,6 +41,7 @@ a:hover {
 }
 
 article,
+nav,
 footer {
   position: relative;
 }

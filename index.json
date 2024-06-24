@@ -1,6 +1,12 @@
 {
     "archive": [
         {
+            "from": "2020.06.27",
+            "to": "2021.01.30",
+            "title": "プレイタイムズ | praytimes.pe.hu",
+            "href": "weare/?id=praytimes"
+        },
+        {
             "from": "2019.4.11",
             "to": "2022.3.30",
             "title": "音ビル | OTO Building",
@@ -39,13 +45,6 @@
             "to": "2021.10.30",
             "title": "新しい生活を集める",
             "href": "https://creative-community.space/sp/",
-            "target": "_blank"
-        },
-        {
-            "from": "2020.06.27",
-            "to": "2021.01.30",
-            "title": "プレイタイムズ | praytimes.pe.hu",
-            "href": "https://praytimes.pe.hu/",
             "target": "_blank"
         }
     ]

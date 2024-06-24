@@ -41,7 +41,7 @@ footer p i {
 #random {
   display: grid;
   place-items: center;
-  height: calc(100vh - 4.5rem);
+  height: calc(100vh - 7.5rem);
   max-height: -webkit-fill-available;
 }
 
