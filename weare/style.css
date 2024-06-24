@@ -19,6 +19,11 @@
   overflow: auto;
 }
 
+#works,
+footer b {
+  width: 100%;
+}
+
 #works img {
   height: 100%;
 }
@@ -26,6 +31,7 @@
 #works nav {
   position: absolute;
   top: 0;
+  flex-wrap: wrap;
   width: calc(100% - 2rem);
 }
 
@@ -33,7 +39,6 @@
 #works[hidden] {
   display: none;
 }
-
 
 [data-theme="light"] #works nav {
   filter: invert();
@@ -121,10 +126,6 @@
 
 #works h1 {
   font-size: 150%;
-}
-
-footer b {
-  width: 100%;
 }
 
 footer a {
