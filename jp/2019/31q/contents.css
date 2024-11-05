@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Times Dot";
+  src: url("https://vg.pe.hu/fonts/family/times-dot/TimesDotRom.otf"),
+    url("https://vg.pe.hu/fonts/family/times-dot/TimesDotBol.otf"),
+    url("https://vg.pe.hu/fonts/family/times-dot/TimesDot-Italic.otf");
+}
+
+#top {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000;
+    font-family: 'Times Dot', 'Times New Roman', Times, serif;
+    font-size: 125%;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.025rem;
+    z-index: 10;
+}
+
+#top:hover {
+    color: red;
+}
+
+#contents {
+    width: 100%;
+    max-width: 550px;
+}
+
+ul li {
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'Times Dot', 'Times New Roman', Times, serif;
+    padding: 1rem;
+}
+
+ul li .title .name,
+ul li b {
+    font-size: 125%;
+}
+
+ul li .title .name {
+    padding-right: 17.5%;
+}
+
+ul li span {
+    display: inline-block;
+}
+
+ul li .by {
+    width: 5%;
+    padding-right: 3.5%;
+}
+
+ul li .as {
+    width: 17.5%;
+    padding-right: 0;
+}
+
+@media screen and (max-width: 750px) {
+    #top {
+        font-size: 3.5vw;
+        letter-spacing: 0.1vw;
+    }
+
+    ul li {
+        font-size: 2.5vw;
+    }
+
+    #contents {
+        padding: 0 10%;
+    }
+}
+
+@media (orientation: portrait) {
+    #book {
+        min-height: 70vh;
+    }
+}

@@ -6,14 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
   <title>∧° ┐ | creative, community space</title>
+  <meta content="∧° ┐ | creative, community space" property="og:title">
+  <meta content="わたしたちは、クリエイティブ・コミュニティスペース ペフ です。" name="description">
+  <meta content="わたしたちは、クリエイティブ・コミュニティスペース ペフ です。" property="og:description">
 
   <link rel="icon" href="icon/favicon.png" type="image/png">
   <link rel="icon" href="icon/android.png" sizes="192x192" type="image/png">
   <link rel="apple-touch-icon-precomposed" href="icon/ios.png" sizes="180x180" type="image/png">
-  <link rel="stylesheet" href="icon/index.css?v=1" />
-  <link rel="stylesheet" href="index.css?v=1">
+  <link rel="stylesheet" href="icon/index.css" />
+  <link rel="stylesheet" href="index.css">
 
-  <meta name="application-name" content="creative-community.space" />
   <meta name="msapplication-TileImage" content="icon/ios.png" />
   <meta name="msapplication-square70x70logo" content="icon/favicon.png" />
   <meta name="msapplication-square150x150logo" content="icon/ios.png" />
@@ -21,10 +23,9 @@
   <meta name="msapplication-square310x310logo" content="icon/instagram.png" />
   <meta name="msapplication-TileColor" content="#fff" />
 
-  <script src="index.js?v=1"></script>
+  <script src="index.js"></script>
+  <script src="weare/index.js"></script>
   <script>
-    indexJSON("index.json")
-
     let news = "わたしたちは、クリエイティブ・コミュニティスペース ペフ です。 ",
       speed = 400;
 
@@ -34,59 +35,86 @@
       ["motto/all", "h_motto"],
       ["motto/all", "u_motto"]
     ]
+
+    // ?id=ID
+    let params = new URLSearchParams(location.search)
+    if (location.search) {
+      if (params.get("id")) {
+        weare("weare/" + params.get("id") + ".json")
+      }
+    } else {
+      indexJSON("index.json");
+
+      document.addEventListener('readystatechange', event => {
+        if (event.target.readyState === 'interactive') {
+          window.setInterval(function () {
+            randomMotto('#p', p_all)
+            randomMotto('#e', e_all)
+            randomMotto('#h', h_all)
+            randomMotto('#u', u_all)
+          }, 4444);
+        } else if (event.target.readyState === 'complete') {
+          //
+        };
+      }, false);
+    }
   </script>
-  <script src="motto/index.js?v=1"></script>
+  <script src="motto/index.js"></script>
 </head>
 
 <body>
-  <nav>
+  <header>
     <input type="button" id="news">
     <input type="checkbox" id="theme" onchange="changeTheme()">
     <label for="theme"></label>
-  </nav>
+  </header>
+
+  <main id="top">
+    <h1 id="motto">
+      <span id="p">P E H U</span>
+      <span id="e"></span>
+      <span id="h"></span>
+      <span id="u">is</span>
+    </h1>
+    <section>
+      <p id="weare">
+        We are
+        The <i>Community</i> to
+        Trying <i>Create</i>
+        The <i>Space</i>
+        to do the things that we want to do.
+        <br>
+        <small class="jp">
+          わたしたちは、実現したいことを快適に実現するための場所・環境をつくり、こ・こ・ろ・豊かな新しい生活を提案する団体です。
+        </small>
+      </p>
+      <p class="pehu" onclick="location.assign('icon/')">∧° ┐</p>
+    </section>
+  </main>
+
+  <main id="works" hidden></main>
 
   <article>
-    <main id="top">
-      <h1 id="motto">
-        <span id="p">P E H U</span>
-        <span id="e"></span>
-        <span id="h"></span>
-        <span id="u">is</span>
-      </h1>
-      <div>
-        <h2>
-          <a href="weare/">We are</a>
-          The <i>Community</i> to
-          Trying <i>Create</i>
-          The <i>Space</i>
-          to do the things that we want to do.
-        </h2>
-        <p class="jp">
-          わたしたちは、実現したいことを快適に実現するための場所・環境をつくり、こ・こ・ろ・豊かな新しい生活を提案する団体です。
-        </p>
-        <hr>
-        <h3 class="pehu" onclick="location.assign('icon/')">∧° ┐</h3>
-      </div>
-    </main>
-
     <nav>
-      <ruby>
-        <rb>Work in Progress</rb>
-        <rt>進行中のプロジェクト</rt>
-      </ruby>
+      <h2>
+        <ruby id="title">
+          <rb>Work in Progress</rb>
+          <rt>進行中のプロジェクト</rt>
+        </ruby>
+      </h2>
       <fieldset id="size">
-        <input type="radio" id="Large" name="size" value="Large" onchange="thisSize('20px')" />
+        <input type="radio" id="Large" name="size" value="Large" onchange="sizeHight('20px', 'calc(100dvh - 4rem)')" />
         <label style="font-size: 20px;" for="Large">大</label>
-        <input type="radio" id="Medium" name="size" value="Medium" onchange="thisSize('16px')" checked />
+        <input type="radio" id="Medium" name="size" value="Medium" onchange="sizeHight('16px', 'calc(100dvh - 8rem)')"
+          checked />
         <label style="font-size: 16px;" for="Medium">標準</label>
-        <input type="radio" id="Small" name="size" value="Small" onchange="thisSize('12px')" />
+        <input type="radio" id="Small" name="size" value="Small" onchange="sizeHight('12px', 'calc(100dvh - 12rem)')" />
         <label style="font-size: 12px;" for="Small">小</label>
       </fieldset>
     </nav>
 
-    <section id="now">
-      <a href="motto/">Comming Soon</a>
-    </section>
+    <section id="info"></section>
+
     <details id="archive">
       <summary>
         <ruby>
@@ -100,13 +128,12 @@
   <footer>
     <p>
       <b>Email</b><br>
-      <u>pehu[at]creative-community.space</u>
+      <u>we.are.pe.hu[at]gmail.com</u>
     </p>
     <p hidden>
       <b>Links</b><br>
       <a href="https://www.are.na/pe-hu/" target="_blank" rel="noopener noreferrer">Are.na</a>
       <a href="https://www.instagram.com/pe_hu_/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="https://twitter.com/pe_hu_" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
     </p>
   </footer>
 </body>

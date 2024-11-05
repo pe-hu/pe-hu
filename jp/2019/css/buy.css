@@ -1,0 +1,37 @@
+/* Copyright (C) 2020 creative-community.space */
+
+#buynow {
+  font-family: "YuGothic", "Yu Gothic", "游ゴシック体", sans-serif;
+  font-size: 75%;
+  margin: 2.5rem auto 1rem;
+  width: 90%;
+}
+
+#buynow h2 {
+  font-size: 175%;
+  font-family: "MS Mincho", "SimSong", serif;
+  font-weight: 400;
+}
+
+#buynow p,
+#buynow details summary {
+  font-size: 125%;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 400;
+}
+
+#buynow img,
+#buynow iframe {
+  width: 100%;
+}
+
+#buynow iframe {
+  height: 20vw;
+}
+
+#buynow details summary {
+  text-align: center;
+  border: solid 1px;
+  margin: 2.5% 0;
+  font-size: 200%;
+}

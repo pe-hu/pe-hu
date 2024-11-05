@@ -1,9 +1,9 @@
-#top h1,
-#top h2 i {
+#motto,
+#top #weare i {
     font-family: "Times New Roman", "Times", serif;
 }
 
-#top h2,
+#top #weare,
 ruby,
 article section,
 details {
@@ -14,13 +14,8 @@ details {
     font-family: "MS Mincho", "SimSong", serif;
 }
 
-h3.pehu {
-    text-align: center;
-    font-weight: 400;
-}
-
-#top h1,
-#top h2 {
+#motto,
+#top #weare {
     font-size: 200%;
     font-weight: 400;
 }
@@ -30,7 +25,8 @@ details p a {
     font-size: 125%;
 }
 
-#top h2 i {
+h2,
+#top #weare i {
     font-size: 111%;
 }
 
@@ -39,28 +35,78 @@ details p a {
     line-height: 175%;
 }
 
-#top h2 {
+p.pehu {
+    text-align: center;
+}
+
+h2,
+p.pehu {
+    font-weight: 400;
+}
+
+#top #weare {
     line-height: 150%;
 }
 
-#top h1,
-#top div {
+#top #weare small {
+    display: block;
+    font-size: 45%;
+    margin-top: 1.5rem;
+    line-height: 150%;
+}
+
+h1,
+#top section {
     padding: 1rem;
+    margin: 0;
 }
 
-#top h1 span {
-    margin: 1rem 0;
+h2 {
+    padding: 0;
+    margin: 0;
 }
 
-#top,
+#weare {
+    margin: 0 0 2rem;
+}
+
+nav,
+#info,
 details p {
-    display: flex;
+    padding: 0;
+    margin: 1rem auto;
+    width: calc(100% - 2rem);
+}
+
+details summary {
+    padding: 0.25rem 1rem;
+}
+
+#top {
     width: 100%;
 }
 
-#top h1 {
+main,
+details p {
+    display: flex;
+}
+
+#motto,
+#top section {
     display: grid;
-    place-items: center;
+}
+
+main[hidden] {
+    display: none;
+}
+
+#top h1 {
+    gap: 1rem;
+    place-content: center;
+}
+
+#top section {
+    justify-content: space-between;
 }
 
 #now {
@@ -91,15 +137,24 @@ details p a {
     width: 100%;
 }
 
+#works img {
+    height: 100%;
+}
+
+#works {
+    transition: 1s;
+    overflow: auto;
+    height: calc(100dvh - 8rem);
+}
+
 /* デバイスが横向きの場合の記述 */
 @media (orientation: landscape) {
     #top {
         flex-flow: row;
-        min-height: calc(100vh - 7.5rem);
     }
 
     #top h1,
-    #top div {
+    #top section {
         flex: 1;
         width: calc(100% / 2);
     }
@@ -108,8 +163,8 @@ details p a {
         margin: auto;
     }
 
-    h3.pehu {
-        font-size: 10vw;
+    p.pehu {
+        font-size: 5rem;
     }
 }
 
@@ -117,11 +172,13 @@ details p a {
 @media (orientation: portrait) {
     #top {
         flex-flow: column-reverse;
-        margin-bottom: 5rem;
     }
 
-    h3.pehu {
-        font-size: 20vw;
-        margin: 27.5vw 0;
+    #motto {
+        height: calc(100dvw - 2rem);
+    }
+
+    p.pehu {
+        display: none;
     }
 }

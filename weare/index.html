@@ -11,45 +11,25 @@
   <meta content="わたしたちは、クリエイティブ・コミュニティスペース ペフ です。" property="og:description">
 
   <link rel="icon" href="../icon/favicon.png" type="image/png">
-  <link rel="stylesheet" href="../icon/index.css?v=1" />
-  <link rel="stylesheet" href="../index.css?v=1">
-  <link rel="stylesheet" href="style.css?v=1" />
+  <link rel="stylesheet" href="../icon/index.css" />
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="style.css" />
 
-  <script src="../index.js?v=1"></script>
+  <script src="../index.js"></script>
   <script>
     let news = "わたしたちは、クリエイティブ・コミュニティスペース ペフ です。 ",
       speed = 400;
   </script>
-  <script src="index.js?v=1"></script>
 </head>
 
 <body>
-  <nav>
+  <header>
     <input type="button" id="news">
     <input type="checkbox" id="theme" onchange="changeTheme()">
     <label for="theme"></label>
-  </nav>
+  </header>
 
   <article>
-    <main id="works" hidden>
-      <nav>
-        <h1>
-          <ruby>
-            <rb>We are</rb>
-            <rt>わたしたち</rt>
-          </ruby>
-        </h1>
-        <fieldset id="size">
-          <input type="radio" id="Large" name="size" value="Large" onchange="sizeHight('20px', '90vh')" />
-          <label style="font-size: 20px;" for="Large">大</label>
-          <input type="radio" id="Medium" name="size" value="Medium" onchange="sizeHight('16px', '75vh')" checked />
-          <label style="font-size: 16px;" for="Medium">標準</label>
-          <input type="radio" id="Small" name="size" value="Small" onchange="sizeHight('12px', '50vh')" />
-          <label style="font-size: 12px;" for="Small">小</label>
-        </fieldset>
-      </nav>
-    </main>
-
     <main id="weare">
       <section>
         <strong>

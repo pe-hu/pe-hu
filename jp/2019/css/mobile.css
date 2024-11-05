@@ -1,0 +1,70 @@
+/* Copyright (C) 2022 creative-community.space */
+
+#cover {
+  position: static;
+  width: 100%;
+  height: auto;
+  max-height: auto;
+}
+
+#index {
+  position: relative;
+}
+
+#left,
+#right {
+  clear: both;
+  float: none;
+  position: relative;
+  padding: 2.5% 10% 2.5% 5%;
+  width: 100%;
+  height: auto;
+  min-height: -webkit-fill-available;
+  -webkit-transform: rotate(0) skew(0, 0);
+  -moz-transform: rotate(0) skew(0, 0);
+  -ms-transform: rotate(0) skew(0, 0);
+  -o-transform: rotate(0) skew(0, 0);
+  transform: rotate(0) skew(0, 0);
+}
+
+h1#title {
+  font-size: 4vh;
+  position: fixed;
+  top: 2.5%;
+  right: 1.25%;
+  padding: 0;
+  height: 100%;
+}
+
+#box,
+#buynow {
+  margin: 0 auto;
+}
+
+#buynow {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 15vw;
+}
+
+#buynow iframe {
+  height: 50vw;
+}
+
+#box,
+#buynow {
+  font-size: 3vw;
+}
+
+#contents details iframe {
+  height: 45vw;
+}
+
+#contents details h3 {
+  padding: 20vw 5vw;
+  font-size: 4vw;
+}
+
+h1#title {
+  font-size: 4.5vw;
+}

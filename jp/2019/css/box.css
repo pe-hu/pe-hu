@@ -1,0 +1,113 @@
+/* Copyright (C) 2020 creative-community.space */
+
+#box {
+  margin: 2rem auto 0;
+}
+
+#box img {
+  display: block;
+}
+
+#box .vol {
+  float: right;
+  margin-top: 5%;
+  margin-right: 5%;
+  width: 30%
+}
+
+#box .logo {
+  float: left;
+  width: 22.5%;
+  margin-top: 12.5%;
+  margin-left: 5%;
+}
+
+#box #info {
+  font-family: "YuGothic", "Yu Gothic", "游ゴシック体", sans-serif;
+  font-size: 75%;
+  display: block;
+  clear: both;
+  padding: 7.5% 5% 0;
+}
+
+#contents {
+  counter-reset: sections;
+  padding: 2.5% 5% 5%;
+  list-style-position: inside;
+}
+
+#contents details {
+  font-family: 'Noto Serif JP', serif;
+  border: solid 1px;
+  color: #333;
+  margin-bottom: 2.5%;
+}
+
+details summary {
+  cursor: pointer;
+  display: block;
+  font-size: 150%;
+  padding: 2.5%;
+}
+
+/* デフォルトの矢印を消す */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary:hover,
+#contents details h3 {
+  color: #fff;
+  background: linear-gradient(-90deg, #eee, #FFC778, #b3cbf6);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* 疑似要素でアイコンを表示 */
+#contents details summary::before {
+  counter-increment: sections;
+  content:"[" counter(sections) "]";
+  font-size: 75%;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 2.5%;
+}
+
+#contents details p {
+  font-size: 0.75rem;
+  padding: 2.5%;
+  margin: 0;
+}
+
+#contents details img,
+#contents details iframe {
+  width: 100%;
+}
+
+details iframe {
+  height: 30vw;
+}
+
+#contents details h3 {
+  padding: 7.5rem 0;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
