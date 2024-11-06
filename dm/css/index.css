@@ -27,16 +27,17 @@ i,
 main button,
 #folder h3 b,
 #folder h4 button,
-#folder h4 a {
+#folder h4 a,
+#preview button {
     color: red;
 }
 
+#contents h4 button:hover,
 #contents p i {
     color: #fff;
     text-shadow: 1px 1px 1px #111;
 }
 
-main,
 #folder {
     background: #fff;
 }
@@ -45,7 +46,8 @@ main,
     background: #eee;
 }
 
-h1 {
+h1,
+#preview button {
     font-size: 200%;
 }
 
@@ -147,8 +149,13 @@ main,
 }
 
 h1,
-main form {
+main form,
+#preview iframe {
     width: 100%;
+}
+
+#preview iframe {
+    height: 100%;
 }
 
 main,
@@ -162,15 +169,37 @@ main,
     height: calc(100dvw * 0.65);
 }
 
+#preview,
+#preview iframe {
+    appearance: none;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+#preview {
+    width: calc(100% - 2.5rem);
+    max-width: calc(95dvh* 0.707070707071);
+    height: 95dvh;
+    overflow: hidden;
+}
+
+#preview button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 @media (orientation: landscape) {
     main form {
         position: absolute;
         top: 5rem;
-        right: 2rem;
+        right: 2.5vw;
         max-width: 321px;
     }
 
     #usbcard {
+        margin-left: 3.21vw;
         place-self: start;
         max-width: 25.5rem;
         max-height: 17.5rem;

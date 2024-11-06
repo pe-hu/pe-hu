@@ -1,0 +1,132 @@
+h1#title,
+#buy h2 {
+    font-family: "MS Mincho", "SimSong", serif;
+}
+
+#cover p,
+#buy h3 {
+    font-family: "YuGothic", "Yu Gothic", "游ゴシック体", sans-serif;
+}
+
+#buy p,
+#cover menu {
+    font-family: 'Noto Serif JP', serif;
+}
+
+#buy button {
+    font-size: 200%;
+}
+
+#buy h2,
+#buy a[href] {
+    font-size: 150%;
+}
+
+#buy h3 {
+    font-size: 100%;
+}
+
+#buy button s {
+    font-size: 55%;
+}
+
+#cover p {
+    font-weight: 550;
+}
+
+h1#title,
+h2,
+h3 {
+    font-weight: 500;
+}
+
+#buy p {
+    text-align: right;
+}
+
+#cover,
+#buy {
+    font-size: 14px;
+}
+
+#buy a[href] {
+    color: red;
+}
+
+@media screen and (max-width: 1200px) {
+
+    #cover,
+    #buy {
+        font-size: 1.25vw;
+    }
+
+    h1#title {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 950px) {
+
+    #cover,
+    #buy {
+        font-size: 14px;
+    }
+
+    h1#title {
+        font-size: 3vh;
+    }
+
+    h1#title span {
+        display: none;
+    }
+}
+
+@media (orientation: portrait) {
+
+    #cover,
+    #buy {
+        font-size: 2.5vw;
+    }
+
+    h1#title {
+        font-size: 4vw;
+    }
+
+    h1#title span {
+        display: none;
+    }
+
+    #cover nav {
+        width: 85%;
+        max-width: 85%;
+    }
+}
+
+#buy {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem 1rem 0;
+}
+
+#buy h3,
+#buy p {
+    padding: 0;
+    margin: 1rem 0;
+}
+
+#buy h2,
+#buy button {
+    padding: 0;
+    margin: 0;
+}
+
+#buy button {
+    background: url(../img/inside.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 0.25rem;
+    width: 100%;
+    aspect-ratio: 1 / 0.7;
+}

@@ -17,50 +17,77 @@
   <!--for Twitter-->
   <meta content="summary_large_image" name="twitter:card">
   <meta content="https://vg.pe.hu/jp/2019/" property="og:url">
-  <meta content="https://vg.pe.hu/jp/2019/img/inside.png" property="og:image">
-  <meta content="https://vg.pe.hu/jp/2019/img/inside.png" name="twitter:image:src">
+  <meta content="https://vg.pe.hu/jp/2019/img/sample.png" property="og:image">
+  <meta content="https://vg.pe.hu/jp/2019/img/sample.png" name="twitter:image:src">
 
   <link rel="stylesheet" type="text/css" href="../style.css" />
   <link rel="stylesheet" type="text/css" href="css/box.css" />
-  <link rel="stylesheet" type="text/css" href="css/buy.css" />
   <link rel="stylesheet" type="text/css" href="css/cover.css" />
-  <link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width: 750px)" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@100&display=swap" rel="stylesheet">
-
-  <script src="../index.js"></script>
-  <script type="text/javascript">
-    document.addEventListener('readystatechange', event => {
-      if (event.target.readyState === 'loading') {
-        // loading
-      } else if (event.target.readyState === 'interactive') {
-        fetchHTML('box.html', '#left')
-      } else if (event.target.readyState === 'complete') {
-        ///
-      }
-    });
-  </script>
 </head>
 
-<body id="cover">
-  <main id="left"></main>
-  <article id="right">
-    <section id="buynow">
-      <h2>This is All About Pehu 2019.</h2>
-      <span id="discription">西天満のペフで行った活動の記録をまとめたデジタルコンテンツ・書籍などを詰め込んだ、限定25部のスペシャルギフトボックス</span>
-      <p>¥5,500-</p>
-      <p>Release on 5.30.2020<br />Limited Only 25 Editions</p>
-      <img src="img/inside.png">
-      <details>
-        <summary>Out of Stock</summary>
-        <iframe src="https://www.youtube.com/embed/rhcUK2Ww-MQ" frameborder="0"></iframe>
-      </details>
-    </section>
-  </article>
-  <footer id="menu"></footer>
+<body>
+  <main id="cover">
+    <nav>
+      <img class="vol" src="img/2019.png">
+      <img class="logo" src="img/pehu.png">
+      <p>
+        #LIMITED EDITION<br />
+        Special Gift Box<br />
+        Published by creative, community space pehu<br />
+        <br />
+        Grant by Chishima Foundation for Creative Osaka
+      </p>
 
-  <h1 id="title">∧° ┐ | creative, community space</h1>
+      <menu>
+        <li data-title="This USB Card is The Digital Magazine 2019"
+          data-discription="西天満のペフで行ったすべての出来事の記録をPDFなどのデジタルファイルにして、このPDFに詰め込みました。" data-image="../dm/img/this.png"
+          data-price="¥3,500" data-youtube="Q8YyVdG_tc4" data-link="../dm/">
+          USB CARD
+        </li>
+        <li data-title="エッセイ集 わかば" data-discription="西天満のペフを運営していたメンバーたちが書いた、生活にまつわる17のエッセイと、成長と変化を表現した5つのアハ体験を収録した書籍"
+          data-image="essay/book/004.png" data-price="¥1,200" data-youtube="8LrhGkiQ7ds" data-link="essay/">
+          ESSAY BOOK
+        </li>
+        <li data-title="31 Questions for daily life" data-discription="答えが二択の簡単な質問を収録した日めくりカレンダー"
+          data-image="31q/pr/cover.png" data-price="¥700" data-link="31q/">
+          DAILY CALENDER
+        </li>
+        <li data-title="小さくコンパクトなスティッキー＆ペン"
+          data-discription="This is the peace/piece of mind. won't forget / write down / make it visible"
+          data-image="members/img/cover.png" data-price="Not for Sale" data-link="members/">
+          STICKY NOTES AND PEN
+        </li>
+        <li>SPECIAL GIFT</li>
+      </menu>
+    </nav>
+  </main>
+
+  <h1 id="title">
+    ∧° ┐ | creative, community space
+    <span>vg.pe.hu/jp</span>
+  </h1>
+
+  <article id="buy">
+    <h2>This is All About Pehu 2019.</h2>
+    <h3>
+      西天満のペフで行った活動の記録をまとめたデジタルコンテンツ・書籍などを詰め込んだ、限定25部のスペシャルギフトボックス
+    </h3>
+    <button data-youtube="rhcUK2Ww-MQ">
+      <s>¥5,500</s><br>
+      <b>Out of Stock</b>
+    </button>
+    <p>
+      Released on
+      <time id="date" datetime="2020/05/30 11:00:00">5.30.2020</time><br>
+      <a>Limited Only 25 Editions</a>
+    </p>
+  </article>
+  <script src="script.js"></script>
 </body>
 
 </html>

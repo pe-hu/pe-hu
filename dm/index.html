@@ -18,8 +18,15 @@
   <meta content="https://vg.pe.hu/jp/dm/img/cover.png" property="og:image">
   <meta content="https://vg.pe.hu/jp/dm/img/cover.png" name="twitter:image:src">
 
-  <script src="../index.js"></script>
   <script>
+    async function fetchHTML(url, query) {
+      fetch(url)
+        .then(response => response.text())
+        .then(html => {
+          document.querySelector(query).innerHTML = html;
+        }, false);
+    };
+
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'interactive') {
       } else if (event.target.readyState === 'complete') {
@@ -36,7 +43,6 @@
 </head>
 
 <body>
-  <!--
   <main>
     <h1>
       <u>This is a Publication</u>
@@ -53,7 +59,7 @@
         <strong>¥3,500</strong>
       </p>
       <p>
-        Release on
+        Released on
         <time id="date" datetime="2020/05/30 11:00:00">5.30.2020</time>
       </p>
     </form>
@@ -67,12 +73,11 @@
       これが、2019年9月に閉館した西天満のペフの全てです。
     </button>
 
-    <nav id="slideshow" onclick="preview()">
+    <nav id="slideshow">
       <figure id="loop_wrap"></figure>
       <script src="img/slideshow.js"></script>
     </nav>
   </main>
-  -->
 
   <article id="contents"></article>
 
@@ -83,23 +88,18 @@
 
   <script>
     const dialog = document.querySelector("#preview");
-    const allButton = document.querySelectorAll("#contents button");
-    allButton.forEach((pdf) => {
-      pdf.addEventListener("click", (e) => {
-        e.preventDefault();
-        preview(pdf.dataset.pdf)
+    const preview = document.querySelector("#preview iframe");
 
-      })
-    }, false);
-
-    function preview(src) {
-      const preview = document.querySelector("#preview iframe");
-      preview.src = src;
+    function previewPDF(src) {
+      preview.src = "https://arena-attachments.s3.amazonaws.com/" + src + ".pdf";
+      preview.hidden = false;
       dialog.showModal();
     };
 
     function closeDialog() {
       dialog.close();
+      preview.src = "";
+      preview.hidden = true;
     };
   </script>
 </body>

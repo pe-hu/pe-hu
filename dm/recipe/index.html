@@ -5,23 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
+  <link rel="icon" href="../../cm/img/renren.jpg">
+  <title>ペフ喫茶のレシピ</title>
+  <meta name="description" content="レンレン料理長が考えた、ペフ喫茶で提供していた料理のレシピ">
+
   <script src="script.js"></script>
   <script>
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'interactive') {
         const scrollElement = document.querySelector('main ul');
         scrollElement.addEventListener('wheel', (e) => {
-          if (Math.abs(e.deltaY) < Math.abs(e.deltaX))
-            return;
+          e.preventDefault();
+
+          if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
 
           const maxScrollLeft = scrollElement.scrollWidth - scrollElement.clientWidth;
           if (
             (scrollElement.scrollLeft <= 0 && e.deltaY < 0) ||
             (scrollElement.scrollLeft >= maxScrollLeft && e.deltaY > 0)
-          )
-            return;
+          ) return;
 
-          e.preventDefault();
           scrollElement.scrollLeft += e.deltaY;
         });
 
@@ -82,9 +85,6 @@
     });
   </script>
 
-  <title>ペフ喫茶のレシピ</title>
-  <meta name="description" content="レンレン料理長が考えた、ペフ喫茶で提供していた料理のレシピ">
-  <link rel="icon" href="https://vg.pe.hu/jp/dm/weare/renren.jpg">
   <link rel="stylesheet" href="../css/www.css" />
   <link rel="stylesheet" href="style.css" />
 

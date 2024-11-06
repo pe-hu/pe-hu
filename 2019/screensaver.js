@@ -1,6 +1,5 @@
 document.addEventListener('readystatechange', event => {
     if (event.target.readyState === 'interactive') {
-        fetchHTML('../../menu.html', '#menu');
         screensaver();
     } else if (event.target.readyState === 'complete') {
         const scrollElement = document.querySelector('main ul');
