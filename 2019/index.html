@@ -5,21 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
-  <script src="../index.js"></script>
-  <script type="text/javascript">
-    document.addEventListener('readystatechange', event => {
-      if (event.target.readyState === 'loading') {
-        // loading
-      } else if (event.target.readyState === 'interactive') {
-        fetchHTML('box.html', '#left')
-        fetchHTML('../menu.html', '#menu')
-      } else if (event.target.readyState === 'complete') {
-        ///
-      }
-    });
-  </script>
 
   <!--og:meta-->
+  <link rel="icon" href="../icon/favicon.png">
   <meta content="product" property="og:type">
   <title>∧° ┐ | Special Gift Box 2019</title>
   <meta content="∧° ┐ | Special Gift Box 2019" property="og:title">
@@ -32,8 +20,7 @@
   <meta content="https://vg.pe.hu/jp/2019/img/inside.png" property="og:image">
   <meta content="https://vg.pe.hu/jp/2019/img/inside.png" name="twitter:image:src">
 
-  <link rel="icon" href="../icon.png">
-  <link rel="stylesheet" type="text/css" href="../menu.css" />
+  <link rel="stylesheet" type="text/css" href="../style.css" />
   <link rel="stylesheet" type="text/css" href="css/box.css" />
   <link rel="stylesheet" type="text/css" href="css/buy.css" />
   <link rel="stylesheet" type="text/css" href="css/cover.css" />
@@ -41,6 +28,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@100&display=swap" rel="stylesheet">
+
+  <script src="../index.js"></script>
+  <script type="text/javascript">
+    document.addEventListener('readystatechange', event => {
+      if (event.target.readyState === 'loading') {
+        // loading
+      } else if (event.target.readyState === 'interactive') {
+        fetchHTML('box.html', '#left')
+      } else if (event.target.readyState === 'complete') {
+        ///
+      }
+    });
+  </script>
 </head>
 
 <body id="cover">

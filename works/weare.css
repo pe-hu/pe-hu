@@ -1,8 +1,3 @@
-#weare,
-#works article {
-  position: relative;
-}
-
 #weare {
   display: grid;
   place-items: center;
@@ -10,58 +5,6 @@
 
 #weare section {
   overflow: auto;
-}
-
-#works {
-  transition: 1s;
-  display: flex;
-  height: 75vh;
-  overflow: auto;
-}
-
-#works,
-footer b {
-  width: 100%;
-}
-
-#works img {
-  height: 100%;
-}
-
-#works nav {
-  position: absolute;
-  top: 0;
-  flex-wrap: wrap;
-  width: calc(100% - 2rem);
-}
-
-#weare[hidden],
-#works[hidden] {
-  display: none;
-}
-
-[data-theme="light"] #works nav {
-  filter: invert();
-  mix-blend-mode: exclusion;
-}
-
-[data-theme="dark"] #works nav {
-  filter: invert(0);
-  mix-blend-mode: exclusion;
-}
-
-@media (prefers-color-scheme: light) {
-  #works nav {
-    filter: invert();
-    mix-blend-mode: exclusion;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  #works nav {
-    filter: invert(0);
-    mix-blend-mode: exclusion;
-  }
 }
 
 /* デバイスが横向きの場合の記述 */
@@ -93,71 +36,54 @@ footer b {
   }
 }
 
-#weare section .end {
-  align-self: end;
-}
-
 #weare hr {
   border: none;
+}
+
+#weare section strong,
+#weare section small {
+  display: block;
+}
+
+#weare section strong,
+#weare section small,
+#weare section hr {
+  padding: 0;
+  margin: 1.5rem;
+}
+
+#weare section strong,
+#weare section small {
+  font-family: "Arial", "Yu Gothic", sans-serif;
 }
 
 #weare section i,
 #weare section a {
   font-family: "Times New Roman", "MS Mincho", "SimSong", serif;
   font-size: 111%;
-}
-
-#weare section i,
-#weare section a {
   font-style: italic;
 }
 
+#works section,
 #weare section strong {
-  display: block;
-}
-
-#weare section strong,
-#works section {
   font-size: 200%;
   font-weight: 500;
   line-height: 155%;
   letter-spacing: 0.05rem;
 }
 
-#works h1 {
-  font-size: 150%;
-}
-
-footer a {
-  font-size: 111%;
-  line-height: 150%;
-}
-
-#weare section p {
+#weare section small {
   font-size: 111%;
   line-height: 200%;
 }
 
-#weare section p.jp {
+#weare section small.jp {
   font-size: 80%;
 }
 
 #weare section .pehu {
   font-size: 70%;
   letter-spacing: 0.02rem;
-}
-
-#works h1 {
-  font-weight: 400;
-  padding: 0;
-  margin: 0;
-}
-
-#weare section strong,
-#weare section p,
-#weare section hr {
-  padding: 0;
-  margin: 1.5rem;
 }
 
 #weare section a {

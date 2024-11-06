@@ -32,7 +32,6 @@ fieldset {
   border: none;
 }
 
-body,
 a,
 label[for="theme"]:after {
   transition: 1s;
@@ -91,7 +90,7 @@ nav,
 header,
 footer {
   display: flex;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 nav,
@@ -107,7 +106,7 @@ footer {
 }
 
 nav {
-  place-items: baseline;
+  place-items: end;
 }
 
 /* デバイスが横向きの場合の記述 */
@@ -135,6 +134,7 @@ input[type=checkbox] {
 
 input[type=button] {
   appearance: none;
+  background: transparent;
   border: none;
   outline: none;
 }

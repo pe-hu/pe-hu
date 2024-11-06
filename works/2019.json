@@ -1,7 +1,7 @@
 {
     "title": "2019",
     "ruby": "1.6 - 9.15",
-    "description": "誠に勝手ながら 2019年9月15日を持って 西天満の ∧°┐ は、完全閉館しました。",
+    "description": "西天満の ∧°┐ は、2019年9月15日を持って完全閉館しました。",
     "img": [
         "https://d2w9rnfcy7mm78.cloudfront.net/15587146/original_ae10434428f11f499e7644d6a153f93a.jpg?1647348604?bc=0",
         "https://lh5.googleusercontent.com/p/AF1QipNEiXDElQ6t1kZ3ELboZZvY5JT2YYEobZCb5KYb=w500-h640-n-k-no",
@@ -18,14 +18,14 @@
     ],
     "links": [
         {
-            "href": "https://vg.pe.hu/jp/",
-            "target": "_blank",
-            "text": "∧° ┐ | creative, community space"
+            "href": "https://vg.pe.hu/2f/",
+            "target": null,
+            "text": "誠に勝手ながら 2019年9月15日を持って 西天満の ∧°┐ は、完全閉館しました。"
         },
         {
             "href": "https://vg.pe.hu/jp/dm/",
-            "target": "_blank",
-            "text": "2019年、私たちは毎月第一日曜日に自分たちの活動や気持ちの記録として、月刊デジタルマガジンを発行しました。"
+            "target": null,
+            "text": "これが、2019年9月に閉館した西天満のペフの全てです。"
         }
     ]
 }

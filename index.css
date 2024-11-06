@@ -1,23 +1,11 @@
-#motto,
-#top #weare i {
-    font-family: "Times New Roman", "Times", serif;
-}
-
-#top #weare,
 ruby,
 article section,
 details {
     font-family: "Arial", "Yu Gothic", sans-serif;
 }
 
-.jp {
-    font-family: "MS Mincho", "SimSong", serif;
-}
-
-#motto,
-#top #weare {
+footer input {
     font-size: 200%;
-    font-weight: 400;
 }
 
 ruby,
@@ -25,40 +13,9 @@ details p a {
     font-size: 125%;
 }
 
-h2,
-#top #weare i {
-    font-size: 111%;
-}
-
-.jp {
-    font-size: 90%;
-    line-height: 175%;
-}
-
-p.pehu {
-    text-align: center;
-}
-
-h2,
-p.pehu {
+h2 {
+    font-size: 100%;
     font-weight: 400;
-}
-
-#top #weare {
-    line-height: 150%;
-}
-
-#top #weare small {
-    display: block;
-    font-size: 45%;
-    margin-top: 1.5rem;
-    line-height: 150%;
-}
-
-h1,
-#top section {
-    padding: 1rem;
-    margin: 0;
 }
 
 h2 {
@@ -66,70 +23,17 @@ h2 {
     margin: 0;
 }
 
-#weare {
-    margin: 0 0 2rem;
-}
-
-nav,
-#info,
-details p {
-    padding: 0;
-    margin: 1rem auto;
-    width: calc(100% - 2rem);
+#random {
+    margin-top: -3.5rem;
 }
 
 details summary {
     padding: 0.25rem 1rem;
 }
 
-#top {
-    width: 100%;
-}
-
-main,
-details p {
-    display: flex;
-}
-
-#motto,
-#top section {
-    display: grid;
-}
-
-main[hidden] {
+#random[hidden],
+#works[hidden] {
     display: none;
-}
-
-#top h1 {
-    gap: 1rem;
-    place-content: center;
-}
-
-#top section {
-    justify-content: space-between;
-}
-
-#now {
-    margin: 0 auto 2rem;
-    width: calc(100% - 2rem);
-}
-
-summary {
-    border-bottom: 1px solid;
-}
-
-summary::marker {
-    content: '☞ ';
-    font-size: 150%;
-}
-
-details[open] summary::marker {
-    content: '☟ ';
-}
-
-details p {
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 details p a {
@@ -138,47 +42,63 @@ details p a {
 }
 
 #works img {
+    transition: 1s;
     height: 100%;
+}
+
+[data-theme="dark"] #works img {
+    filter: grayscale(1);
+}
+
+[data-theme="dark"] #works img:hover {
+    filter: grayscale(0);
 }
 
 #works {
     transition: 1s;
     overflow: auto;
-    height: calc(100dvh - 8rem);
+    height: calc(75vh - 10rem);
 }
 
-/* デバイスが横向きの場合の記述 */
-@media (orientation: landscape) {
-    #top {
-        flex-flow: row;
-    }
-
-    #top h1,
-    #top section {
-        flex: 1;
-        width: calc(100% / 2);
-    }
-
-    #top h1 {
-        margin: auto;
-    }
-
-    p.pehu {
-        font-size: 5rem;
-    }
+article nav,
+#progress p,
+details p {
+    padding: 0;
+    margin: 1rem auto;
+    width: calc(100% - 2rem);
 }
 
-/* デバイスが縦向きの場合の記述 */
-@media (orientation: portrait) {
-    #top {
-        flex-flow: column-reverse;
-    }
+header {
+    position: relative;
+    z-index: 1;
+}
 
-    #motto {
-        height: calc(100dvw - 2rem);
-    }
+#works,
+details p,
+footer p {
+    display: flex;
+}
 
-    p.pehu {
-        display: none;
-    }
+details p {
+    gap: 0.25rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer p {
+    gap: 0.5rem;
+    flex-flow: column;
+}
+
+details summary {
+    border-bottom: 1px solid;
+}
+
+details summary::marker {
+    content: '☞ ';
+    font-size: 150%;
+}
+
+details[open] summary::marker {
+    content: '☟ ';
 }

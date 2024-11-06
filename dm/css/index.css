@@ -1,0 +1,227 @@
+.pehu,
+#folder h3,
+#folder summary b,
+#folder li,
+#folder h4 {
+    font-family: "MS Mincho", "SimSong", serif;
+    letter-spacing: 0.04rem;
+}
+
+main,
+#contents p,
+#folder h4 small {
+    font-family: "Arial", "Yu Gothic", sans-serif;
+}
+
+i,
+#folder h4 strong {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+i,
+#folder h4 strong {
+    font-style: italic;
+    margin-right: 0.25rem;
+}
+
+main button,
+#folder h3 b,
+#folder h4 button,
+#folder h4 a {
+    color: red;
+}
+
+#contents p i {
+    color: #fff;
+    text-shadow: 1px 1px 1px #111;
+}
+
+main,
+#folder {
+    background: #fff;
+}
+
+#contents {
+    background: #eee;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+#contents p i {
+    font-size: 150%;
+}
+
+main form,
+main form h2,
+#folder h4 strong {
+    font-size: 125%;
+}
+
+i,
+strong,
+button,
+b,
+h3,
+#folder h4 a {
+    font-size: 111%;
+}
+
+#contents p small,
+#folder h4 small,
+#folder h4 button {
+    font-size: 95%;
+}
+
+h1,
+h2,
+h3,
+h4,
+strong,
+#folder b {
+    font-weight: 500;
+}
+
+h1 {
+    line-height: 150%;
+}
+
+#contents p,
+#folder h4 {
+    line-height: 200%;
+}
+
+button {
+    appearance: none;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: inherit;
+}
+
+h1,
+main form {
+    padding: 1rem;
+    margin: 0;
+}
+
+#contents {
+    padding: 0 1rem;
+}
+
+#folder h3 {
+    padding: 0;
+    margin: 1rem;
+}
+
+main button {
+    margin: 1.5rem 0;
+}
+
+main {
+    position: relative;
+}
+
+#folder h3 {
+    display: flex;
+}
+
+#folder h3 {
+    justify-content: space-between;
+}
+
+main,
+#contents {
+    display: grid;
+    place-items: center;
+}
+
+#slideshow {
+    place-self: end center;
+}
+
+#folder h4 button {
+    display: block;
+    float: right;
+}
+
+h1,
+main form {
+    width: 100%;
+}
+
+main,
+#contents {
+    min-height: 100dvh;
+}
+
+#usbcard {
+    margin: 0;
+    width: 100%;
+    height: calc(100dvw * 0.65);
+}
+
+@media (orientation: landscape) {
+    main form {
+        position: absolute;
+        top: 5rem;
+        right: 2rem;
+        max-width: 321px;
+    }
+
+    #usbcard {
+        place-self: start;
+        max-width: 25.5rem;
+        max-height: 17.5rem;
+    }
+}
+
+@media (orientation: portrait) {
+
+    h1 u {
+        display: block;
+    }
+
+    main form {
+        width: 100%;
+    }
+
+    #usbcard {
+        place-self: end;
+    }
+}
+
+@media print {
+    html {
+        font-size: 2vw;
+    }
+
+    main form {
+        position: absolute;
+        top: 10rem;
+        right: 1rem;
+        max-width: 40vw;
+    }
+
+    #usbcard {
+        place-self: start;
+        max-width: 25.5rem;
+        max-height: 17.5rem;
+    }
+
+    #contents p i {
+        display: block;
+        font-size: 250%;
+        line-height: 125%;
+        margin: 0.5rem 0 0;
+    }
+
+    #contents p small {
+        font-size: 90%;
+    }
+
+    #contents {
+        page-break-before: always;
+    }
+}

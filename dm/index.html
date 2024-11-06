@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="icon" href="../icon/favicon.png">
+  <title>This USB Card is The Digital Magazine</title>
+  <meta content="This USB Card is The Digital Magazine" property="og:title">
+  <meta content="これが、2019年9月に閉館した西天満のペフの全てです。" name="description">
+  <meta content="これが、2019年9月に閉館した西天満のペフの全てです。" property="og:description">
+
+  <!--og:meta-->
+  <meta content="product" property="og:type">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="https://vg.pe.hu/jp/dm/" property="og:url">
+  <meta content="https://vg.pe.hu/jp/dm/img/cover.png" property="og:image">
+  <meta content="https://vg.pe.hu/jp/dm/img/cover.png" name="twitter:image:src">
+
+  <script src="../index.js"></script>
+  <script>
+    document.addEventListener('readystatechange', event => {
+      if (event.target.readyState === 'interactive') {
+      } else if (event.target.readyState === 'complete') {
+        fetchHTML('contents.html', '#contents');
+      }
+    });
+  </script>
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/folder.css">
+  <link rel="stylesheet" href="css/rotate.css">
+  <link rel="stylesheet" href="img/slideshow.css">
+</head>
+
+<body>
+  <!--
+  <main>
+    <h1>
+      <u>This is a Publication</u>
+      by creative, community space
+      <span class="pehu">∧°┐</span>
+    </h1>
+
+    <form action="">
+      <h2>
+        This <i>USB Card</i> is<br />
+        The <i>Digital Magazine</i>
+      </h2>
+      <p>
+        <strong>¥3,500</strong>
+      </p>
+      <p>
+        Release on
+        <time id="date" datetime="2020/05/30 11:00:00">5.30.2020</time>
+      </p>
+    </form>
+
+    <figure id="usbcard" class="css-rotate">
+      <img class="css-back" src="img/this.png">
+      <img class="css-front" src="img/index.png">
+    </figure>
+
+    <button type="button">
+      これが、2019年9月に閉館した西天満のペフの全てです。
+    </button>
+
+    <nav id="slideshow" onclick="preview()">
+      <figure id="loop_wrap"></figure>
+      <script src="img/slideshow.js"></script>
+    </nav>
+  </main>
+  -->
+
+  <article id="contents"></article>
+
+  <dialog id="preview">
+    <button type="button" onclick="closeDialog()">×</button>
+    <iframe src="" frameborder="0"></iframe>
+  </dialog>
+
+  <script>
+    const dialog = document.querySelector("#preview");
+    const allButton = document.querySelectorAll("#contents button");
+    allButton.forEach((pdf) => {
+      pdf.addEventListener("click", (e) => {
+        e.preventDefault();
+        preview(pdf.dataset.pdf)
+
+      })
+    }, false);
+
+    function preview(src) {
+      const preview = document.querySelector("#preview iframe");
+      preview.src = src;
+      dialog.showModal();
+    };
+
+    function closeDialog() {
+      dialog.close();
+    };
+  </script>
+</body>
+
+</html>

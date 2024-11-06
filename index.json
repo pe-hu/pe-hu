@@ -1,36 +1,4 @@
 {
-    "archive": [
-        {
-            "from": "2020.06.27",
-            "to": "2021.01.30",
-            "title": "プレイタイムズ | praytimes.pe.hu",
-            "href": "?id=praytimes"
-        },
-        {
-            "from": "2019.09.02",
-            "to": "2019.09.16",
-            "title": "A+A- AA CC K2 X W",
-            "href": "?id=aaacck2xw"
-        },
-        {
-            "from": "2019.4.11",
-            "to": "2022.3.30",
-            "title": "音ビル | OTO Building",
-            "href": "?id=otobuilding"
-        },
-        {
-            "from": "2019.1.6",
-            "to": "2019.9.15",
-            "title": "2019 | creative, community space",
-            "href": "?id=2019"
-        },
-        {
-            "from": "2017.12.16",
-            "to": "2018.4.30",
-            "title": "1F | gallery, community space",
-            "href": "?id=1f"
-        }
-    ],
     "todo": [
         {
             "from": "2022.07.23",
@@ -52,6 +20,38 @@
             "title": "新しい生活を集める",
             "href": "https://creative-community.space/sp/",
             "target": "_blank"
+        }
+    ],
+    "complete": [
+        {
+            "from": "2020.6.27",
+            "to": "2021.1.30",
+            "title": "プレイタイムズ | praytimes.pe.hu",
+            "href": "?id=praytimes"
+        },
+        {
+            "from": "2019.9.02",
+            "to": "2019.9.16",
+            "title": "A+A- AA CC K2 X W",
+            "href": "?id=aaacck2xw"
+        },
+        {
+            "from": "2019.4.11",
+            "to": "2022.3.30",
+            "title": "音ビル | OTO Building",
+            "href": "?id=otobuilding"
+        },
+        {
+            "from": "2019.1.6",
+            "to": "2019.9.15",
+            "title": "creative, community space",
+            "href": "?id=2019"
+        },
+        {
+            "from": "2017.12.16",
+            "to": "2018.4.30",
+            "title": "gallery, community space",
+            "href": "?id=1f"
         }
     ]
 }

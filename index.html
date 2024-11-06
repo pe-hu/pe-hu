@@ -14,7 +14,9 @@
   <link rel="icon" href="icon/android.png" sizes="192x192" type="image/png">
   <link rel="apple-touch-icon-precomposed" href="icon/ios.png" sizes="180x180" type="image/png">
   <link rel="stylesheet" href="icon/index.css" />
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="motto/style.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="works/weare.css" />
 
   <meta name="msapplication-TileImage" content="icon/ios.png" />
   <meta name="msapplication-square70x70logo" content="icon/favicon.png" />
@@ -24,7 +26,7 @@
   <meta name="msapplication-TileColor" content="#fff" />
 
   <script src="index.js"></script>
-  <script src="weare/index.js"></script>
+  <script src="works.js"></script>
   <script>
     let news = "わたしたちは、クリエイティブ・コミュニティスペース ペフ です。 ",
       speed = 400;
@@ -37,27 +39,27 @@
     ]
 
     // ?id=ID
-    let params = new URLSearchParams(location.search)
+    let params = new URLSearchParams(location.search);
     if (location.search) {
       if (params.get("id")) {
-        weare("weare/" + params.get("id") + ".json")
-      }
+        worksJson("works/" + params.get("id") + ".json");
+      };
     } else {
       indexJSON("index.json");
 
       document.addEventListener('readystatechange', event => {
         if (event.target.readyState === 'interactive') {
           window.setInterval(function () {
-            randomMotto('#p', p_all)
-            randomMotto('#e', e_all)
-            randomMotto('#h', h_all)
-            randomMotto('#u', u_all)
+            randomMotto('#p', p_all);
+            randomMotto('#e', e_all);
+            randomMotto('#h', h_all);
+            randomMotto('#u', u_all);
           }, 4444);
         } else if (event.target.readyState === 'complete') {
           //
         };
       }, false);
-    }
+    };
   </script>
   <script src="motto/index.js"></script>
 </head>
@@ -69,27 +71,13 @@
     <label for="theme"></label>
   </header>
 
-  <main id="top">
+  <main id="random">
     <h1 id="motto">
       <span id="p">P E H U</span>
       <span id="e"></span>
       <span id="h"></span>
       <span id="u">is</span>
     </h1>
-    <section>
-      <p id="weare">
-        We are
-        The <i>Community</i> to
-        Trying <i>Create</i>
-        The <i>Space</i>
-        to do the things that we want to do.
-        <br>
-        <small class="jp">
-          わたしたちは、実現したいことを快適に実現するための場所・環境をつくり、こ・こ・ろ・豊かな新しい生活を提案する団体です。
-        </small>
-      </p>
-      <p class="pehu" onclick="location.assign('icon/')">∧° ┐</p>
-    </section>
   </main>
 
   <main id="works" hidden></main>
@@ -103,19 +91,19 @@
         </ruby>
       </h2>
       <fieldset id="size">
-        <input type="radio" id="Large" name="size" value="Large" onchange="sizeHight('20px', 'calc(100dvh - 4rem)')" />
+        <input type="radio" id="Large" name="size" value="Large" onchange="sizeHight('20px', 'calc(100vh - 10rem)')" />
         <label style="font-size: 20px;" for="Large">大</label>
-        <input type="radio" id="Medium" name="size" value="Medium" onchange="sizeHight('16px', 'calc(100dvh - 8rem)')"
+        <input type="radio" id="Medium" name="size" value="Medium" onchange="sizeHight('16px', 'calc(75vh - 10rem)')"
           checked />
         <label style="font-size: 16px;" for="Medium">標準</label>
-        <input type="radio" id="Small" name="size" value="Small" onchange="sizeHight('12px', 'calc(100dvh - 12rem)')" />
+        <input type="radio" id="Small" name="size" value="Small" onchange="sizeHight('12px', 'calc(55vh - 10rem)')" />
         <label style="font-size: 12px;" for="Small">小</label>
       </fieldset>
     </nav>
 
-    <section id="info"></section>
+    <section id="progress"></section>
 
-    <details id="archive">
+    <details id="complete">
       <summary>
         <ruby>
           <rb>Completed</rb>
@@ -126,6 +114,7 @@
   </article>
 
   <footer>
+    <!--
     <p>
       <b>Email</b><br>
       <u>we.are.pe.hu[at]gmail.com</u>
@@ -135,6 +124,7 @@
       <a href="https://www.are.na/pe-hu/" target="_blank" rel="noopener noreferrer">Are.na</a>
       <a href="https://www.instagram.com/pe_hu_/" target="_blank" rel="noopener noreferrer">Instagram</a>
     </p>
+    -->
   </footer>
 </body>
 

@@ -1,12 +1,17 @@
 #logo {
     display: flex;
+    gap: 1rem;
     flex-flow: wrap;
     align-items: flex-start;
     justify-content: space-between;
     position: relative;
 }
 
-#logo pre {
+#logo {
+    padding: 1rem 0;
+}
+
+#logo aside {
     padding: 1rem;
 }
 
@@ -18,10 +23,6 @@
     border: #000 solid 1px;
     max-width: 100%;
     max-height: 100%;
-}
-
-#logo section {
-    padding: 1rem;
 }
 
 @page {
@@ -51,9 +52,7 @@
     color: #fff;
 }
 
-#logo pre {
+#logo aside {
     box-sizing: border-box;
-    font-family: inherit;
-    overflow: auto;
     max-width: 100%;
 }

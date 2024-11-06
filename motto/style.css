@@ -5,7 +5,7 @@
 
 #random #motto,
 #all dt,
-footer p i {
+footer h2 i {
   font-family: "Times New Roman", "Times", serif;
 }
 
@@ -15,15 +15,16 @@ footer p i {
 }
 
 #all dt,
-footer p a {
+footer h2 a {
   font-size: 150%;
 }
 
-footer p {
+footer h2 {
   font-size: 125%;
+  font-weight: 400;
 }
 
-footer p i {
+footer h2 i {
   font-size: 111%;
 }
 
@@ -41,13 +42,18 @@ footer p i {
 #random {
   display: grid;
   place-items: center;
-  height: calc(100dvh - 5rem);
+  height: calc(100vh - 4rem);
   max-height: -webkit-fill-available;
 }
 
-nav,
-#random {
+#random,
+#random nav {
   padding: 1rem;
+}
+
+footer h2 {
+  padding: 0;
+  margin: 0;
 }
 
 #random nav {
@@ -62,12 +68,12 @@ nav,
 }
 
 #random #motto span:hover {
-  text-decoration: red 2px underline wavy;
+  text-decoration: red 0.1rem underline double;
 }
 
 #random #motto span:hover::after {
   position: absolute;
-  top: 90%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0.5rem;
@@ -84,7 +90,7 @@ nav,
 
 #all {
   display: flex;
-  height: calc(100dvh - 10rem);
+  height: calc(100vh - 10rem);
 }
 
 #all dl {
@@ -99,10 +105,13 @@ nav,
 }
 
 @media (max-width: 550px) {
+  #random #motto {
+    margin-bottom: 7.5rem;
+  }
+
   #random #motto span {
     display: block;
-    font-size: 125%;
-    padding: 0.5rem 0;
+    padding: 0.5rem;
   }
 
   #all dl {
@@ -117,6 +126,6 @@ nav,
 
   #random #motto span {
     display: block;
-    padding: 0.5rem 0;
+    padding: 0.5rem;
   }
 }

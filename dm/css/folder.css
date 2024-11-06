@@ -1,0 +1,86 @@
+#folder summary::marker,
+#folder summary::-webkit-details-marker {
+    display: none;
+}
+
+#folder {
+    border-radius: 1rem;
+    max-width: 70rem;
+    margin: 0.5rem auto;
+}
+
+#folder summary {
+    cursor: pointer;
+    display: block;
+    border: none;
+    outline: none;
+    position: relative;
+}
+
+#folder summary::before,
+#folder summary::after {
+    content: "";
+    position: absolute;
+    border-radius: 0.25rem;
+    background-color: #39a9d6;
+}
+
+#folder summary::before {
+    top: 0.1rem;
+    left: 0.1rem;
+    width: 1rem;
+    height: 1.7rem;
+    filter: brightness(0.75);
+}
+
+#folder summary::after {
+    top: 0.4rem;
+    left: 0.1rem;
+    width: 2rem;
+    height: 1.5rem;
+    transform-origin: bottom left;
+    transition: transform 0.25s;
+}
+
+#folder details[close] summary::after {
+    transform: skew(0);
+}
+
+#folder details[open] summary::after {
+    transform: skew(-12.5deg);
+}
+
+#folder details {
+    padding: 0;
+    margin: 0 1rem;
+}
+
+#folder summary b {
+    display: inline-block;
+    line-height: 222%;
+    padding-left: 3rem;
+}
+
+#folder summary ul {
+    display: flex;
+    padding: 0;
+    margin: 1rem 0;
+    gap: 0.5rem 1rem;
+    flex-wrap: wrap;
+}
+
+#folder summary ul li {
+    padding: 0 0.123rem;
+    margin: 0;
+    list-style: none inside;
+    font-size: 95%;
+}
+
+#folder summary img {
+    display: block;
+    float: left;
+    margin: 0 0.5rem 0 0;
+    height: 2.5rem;
+    user-select: none;
+    pointer-events: none;
+}
