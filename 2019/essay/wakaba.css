@@ -1,5 +1,8 @@
 .wakaba {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     max-width: 550px;
     height: 75%;
@@ -90,11 +93,11 @@
     .wakaba::before {
         animation: 100s infinite alternate wakabaL;
     }
-    
+
     .wakaba::after {
         animation: 100s infinite alternate wakabaR;
     }
-    
+
     .wakaba u {
         animation: 100s infinite alternate wakaba;
     }
@@ -104,11 +107,11 @@
     .wakaba::before {
         animation: 0 infinite alternate wakabaL;
     }
-    
+
     .wakaba::after {
         animation: 0 infinite alternate wakabaR;
     }
-    
+
     .wakaba u {
         animation: 0 infinite alternate wakaba;
     }

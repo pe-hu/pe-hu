@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "Times Dot";
-  src: url("https://vg.pe.hu/fonts/family/times-dot/TimesDotRom.otf"),
-    url("https://vg.pe.hu/fonts/family/times-dot/TimesDotBol.otf"),
-    url("https://vg.pe.hu/fonts/family/times-dot/TimesDot-Italic.otf");
+    font-family: "Times Dot";
+    src: url("https://vg.pe.hu/fonts/family/times-dot/TimesDotRom.otf"),
+        url("https://vg.pe.hu/fonts/family/times-dot/TimesDotBol.otf"),
+        url("https://vg.pe.hu/fonts/family/times-dot/TimesDot-Italic.otf");
 }
 
 #top {
@@ -18,18 +18,12 @@
     z-index: 10;
 }
 
-#top:hover {
-    color: red;
-}
-
 #contents {
-    width: 100%;
-    max-width: 550px;
+    width: 90%;
+    max-width: 30rem;
 }
 
 ul li {
-    box-sizing: border-box;
-    font-size: 100%;
     font-family: 'Times Dot', 'Times New Roman', Times, serif;
     padding: 1rem;
 }
@@ -57,23 +51,8 @@ ul li .as {
     padding-right: 0;
 }
 
-@media screen and (max-width: 750px) {
-    #top {
-        font-size: 3.5vw;
-        letter-spacing: 0.1vw;
-    }
-
-    ul li {
-        font-size: 2.5vw;
-    }
-
-    #contents {
-        padding: 0 10%;
-    }
-}
-
 @media (orientation: portrait) {
-    #book {
-        min-height: 70vh;
+    html {
+        font-size: 3vw;
     }
 }

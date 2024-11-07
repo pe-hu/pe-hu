@@ -72,7 +72,8 @@ h3,
 
 #contents p small,
 #folder h4 small,
-#folder h4 button {
+#folder h4 button,
+#folder h4 a {
     font-size: 95%;
 }
 
@@ -143,9 +144,12 @@ main,
     place-self: end center;
 }
 
-#folder h4 button {
+#folder h4 button,
+#folder h4 a {
     display: block;
     float: right;
+    text-decoration: none;
+    padding: 0;
 }
 
 h1,

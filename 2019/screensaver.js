@@ -2,7 +2,7 @@ document.addEventListener('readystatechange', event => {
     if (event.target.readyState === 'interactive') {
         screensaver();
     } else if (event.target.readyState === 'complete') {
-        const scrollElement = document.querySelector('main ul');
+        const scrollElement = document.querySelector('ul');
         scrollElement.addEventListener('wheel', (e) => {
             if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
             const maxScrollLeft = scrollElement.scrollWidth - scrollElement.clientWidth;
@@ -28,7 +28,14 @@ async function fetchHTML(url = '', query = '') {
 
 function screensaver() {
     const sec = 31;
-    const events = ['keydown', 'mousemove', 'scroll', 'wheel', 'touchstart', 'click'];
+    const events = [
+        'keydown',
+        'mousemove',
+        'scroll',
+        'wheel',
+        'touchstart',
+        'click'
+    ];
     const screensaver = document.querySelector('#screensaver');
     let timeoutId;
 
@@ -40,6 +47,7 @@ function screensaver() {
     // スクリーンセーバー起動
     function start() {
         screensaver.style.opacity = 1;
+        screensaver.hidden = false;
     }
 
     // イベント設定
@@ -54,6 +62,7 @@ function screensaver() {
         clearTimeout(timeoutId);
         setTimer();
         screensaver.style.opacity = 0;
+        screensaver.hidden = true;
     }
 
     setTimer();

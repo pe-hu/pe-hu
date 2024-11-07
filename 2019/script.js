@@ -5,6 +5,7 @@ const thish3 = "西天満のペフで行った活動の記録をまとめたデ�
 const thisImage = "img/inside.png";
 const thisPrice = "<s>¥5,500</s><br><b>Out of Stock</b>";
 const thisNote = "Limited Only 25 Editions";
+const thisYouTube = "rhcUK2Ww-MQ";
 
 document.addEventListener('readystatechange', event => {
     if (event.target.readyState === 'interactive') {
@@ -22,6 +23,12 @@ document.addEventListener('readystatechange', event => {
                     discription.textContent = item.dataset.discription;
                     button.style.backgroundImage = "url(" + item.dataset.image + ")";
                     button.innerHTML = `<b>${item.dataset.price}</b>`;
+                    if (item.dataset.youtube) {
+                        button.dataset.youtube = item.dataset.youtube;
+                    } else {
+                        button.dataset.youtube = thisYouTube;
+                    }
+
                     a.textContent = "more info";
                     a.href = item.dataset.link;
                     a.hidden = false;
@@ -30,6 +37,7 @@ document.addEventListener('readystatechange', event => {
                     discription.textContent = thish3;
                     button.style.backgroundImage = "url(" + thisImage + ")";
                     button.innerHTML = thisPrice;
+                    button.dataset.youtube = thisYouTube;
                     a.textContent = thisNote;
                     a.href = "#";
                     a.hidden = true;
