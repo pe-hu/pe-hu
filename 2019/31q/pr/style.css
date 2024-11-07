@@ -1,7 +1,16 @@
-ul li {
-    background-size: 75%;
+ul li,
+#screensaver {
     background-position: center;
     background-repeat: no-repeat;
+}
+
+ul li {
+    background-size: 90%;
+}
+
+#screensaver {
+    background-color: #fff;
+    background-size: 37.5rem auto;
 }
 
 #book {
@@ -30,4 +39,10 @@ ul li {
 
 #end {
     background-image: url(../pr/logo.jpeg);
+}
+
+@media (orientation: portrait) {
+    #screensaver {
+        background-size: 95% auto;
+    }
 }

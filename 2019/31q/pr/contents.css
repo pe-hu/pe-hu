@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "Times Dot";
+    src: url("https://verygois.github.io/fontbook/family/times-dot/TimesDotRom.otf"),
+        url("https://verygois.github.io/fontbook/family/times-dot/TimesDotBol.otf"),
+        url("https://verygois.github.io/fontbook/family/times-dot/TimesDot-Italic.otf");
+}
+
+body {
+    font-family: 'Times Dot', 'Times New Roman', Times, serif;
+}
+
+h1 {
+    display: grid;
+    place-items: center;
+    font-size: 125%;
+    font-weight: 500;
+}
+
+h2,
+strong {
+    font-size: 150%;
+    font-weight: 500;
+}
+
+#top {
+    font-size: 100%;
+    font-weight: 500;
+    letter-spacing: 0.025rem;
+}
+
+ul li .title .name,
+ul li b {
+    font-size: 125%;
+}
+
+form,
+#contents {
+    width: 80%;
+    max-width: 35rem;
+}
+
+form {
+    padding: 1rem;
+}
+
+ul li .title .name {
+    padding-right: 17.5%;
+}
+
+ul li span {
+    display: inline-block;
+}
+
+ul li .by {
+    width: 5%;
+    padding-right: 3.5%;
+}
+
+ul li .as {
+    width: 17.5%;
+    padding-right: 0;
+}
+
+@media (orientation: portrait) {
+    html {
+        font-size: 2.5vw;
+    }
+
+    .form {
+        min-height: auto;
+    }
+}

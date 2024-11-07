@@ -9,13 +9,12 @@ document.addEventListener('readystatechange', event => {
             if (
                 (scrollElement.scrollLeft <= 0 && e.deltaY < 0) ||
                 (scrollElement.scrollLeft >= maxScrollLeft && e.deltaY > 0)
-            )
-                return;
+            ) return;
 
             e.preventDefault();
             scrollElement.scrollLeft += e.deltaY;
         });
-    }
+    };
 });
 
 async function fetchHTML(url = '', query = '') {
@@ -24,10 +23,10 @@ async function fetchHTML(url = '', query = '') {
         .then(innerHTML => {
             document.querySelector(query).innerHTML = innerHTML
         });
-}
+};
 
 function screensaver() {
-    const sec = 31;
+    const screensaver = document.querySelector('#screensaver');
     const events = [
         'keydown',
         'mousemove',
@@ -36,8 +35,9 @@ function screensaver() {
         'touchstart',
         'click'
     ];
-    const screensaver = document.querySelector('#screensaver');
-    let timeoutId;
+
+    let timeoutId,
+        sec = 31;
 
     // タイマー設定
     function setTimer() {

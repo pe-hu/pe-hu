@@ -61,6 +61,14 @@ dialog button {
     mix-blend-mode: difference;
 }
 
+#buy h2,
+#buy h3,
+#buy button,
+#buy p {
+    width: 100%;
+    max-width: 450px;
+}
+
 @media screen and (max-width: 1200px) {
 
     #cover,
@@ -87,6 +95,14 @@ dialog button {
     h1#title span {
         display: none;
     }
+
+    #buy h2,
+    #buy h3,
+    #buy button,
+    #buy p {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 @media (orientation: portrait) {
@@ -108,10 +124,19 @@ dialog button {
         width: 85%;
         max-width: 85%;
     }
+
+    #buy h2,
+    #buy h3,
+    #buy button,
+    #buy p {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 #buy {
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: space-around;
     padding: 2rem 1rem 0;
@@ -148,7 +173,6 @@ dialog {
     border-radius: 0.25rem;
     color: #000;
     outline: none;
-    width: 100%;
     aspect-ratio: 1 / 0.7;
 }
 

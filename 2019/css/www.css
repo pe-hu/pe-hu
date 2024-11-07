@@ -3,7 +3,6 @@ html {
     height: -webkit-fill-available;
 }
 
-
 * {
     box-sizing: border-box;
 }
@@ -35,13 +34,9 @@ ul,
 }
 
 h1,
-ul {
+ul,
+#screensaver {
     top: 0;
-}
-
-ul li {
-    display: grid;
-    place-items: center;
 }
 
 h1 {
@@ -50,6 +45,11 @@ h1 {
 
 #screensaver {
     z-index: 99;
+}
+
+ul li {
+    display: grid;
+    place-items: center;
 }
 
 ul {
@@ -81,6 +81,7 @@ ul li {
     }
 
     ul {
+        position: relative;
         flex-flow: column;
         scroll-snap-type: y proximity;
         height: auto;

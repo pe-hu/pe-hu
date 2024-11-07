@@ -1,7 +1,6 @@
 daily();
 
 function daily() {
-    mydate = new Date();
-    num = mydate.getDate();
-    document.querySelector('#cover').style.backgroundImage = 'url(img/' + num + '.jpg)';
+    d = new Date().getDate();
+    document.querySelector('#screensaver').style.backgroundImage = 'url(img/' + d + '.jpg)';
 }

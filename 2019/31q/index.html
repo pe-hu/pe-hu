@@ -22,50 +22,52 @@
 
     <link rel="stylesheet" href="../css/www.css" />
     <link rel="stylesheet" href="pr/style.css" />
-    <link rel="stylesheet" href="contents.css" />
+    <link rel="stylesheet" href="pr/contents.css" />
+
+    <script src="../screensaver.js"></script>
 </head>
 
 <body>
-    <h1 id="top">ichoose.pe.hu</h1>
+    <h1>
+        <b id="top">ichoose.pe.hu</b>
+    </h1>
+    </h1>
     <ul>
         <li id="book"></li>
-        <li>
+        <li class="form">
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                <p>This is a daily calendar of compilation simple two-choice questions.</p>
-                <p>これは答えが二択の簡単な31の質問を収録した日めくりカレンダーです。</p>
+                <h2>This is a daily calendar of compilation simple two-choice questions.</h2>
+                <small>これは答えが二択の簡単な31の質問を収録した日めくりカレンダーです。</small>
                 <br>
-                <p>¥ <b>700</b></p>
+                <p>¥ <strong>700</strong></p>
             </form>
         </li>
         <li id="one"></li>
         <li id="ten"></li>
         <li id="seventeen"></li>
         <li id="twenty"></li>
-        <li>
+        <li class="form">
             <article id="contents"></article>
         </li>
         <li id="back"></li>
     </ul>
-    <footer id="screensaver">
-        <p id="cover"></p>
-        <script src="img/daily.js"></script>
-    </footer>
+    <footer id="screensaver"></footer>
+    <script>
+        let d = new Date().getDate();
+
+        daily();
+        fetchHTML('pr/contents.html', '#contents');
+
+        function daily() {
+            const screensaver = document.querySelector('#screensaver');
+            screensaver.style.backgroundImage = 'url(img/' + d + '.jpg)';
+        };
+    </script>
+
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="jquery.arctext.js"></script>
+    <script src="pr/jquery.arctext.js"></script>
     <script>
         $('#top').arctext({ radius: 75 });
-    </script>
-    <script src="../screensaver.js"></script>
-    <script type="text/javascript">
-        document.addEventListener('readystatechange', event => {
-            if (event.target.readyState === 'loading') {
-                // loading
-            } else if (event.target.readyState === 'interactive') {
-                // 
-            } else if (event.target.readyState === 'complete') {
-                fetchHTML('contents.html', '#contents');
-            }
-        });
     </script>
 </body>
 

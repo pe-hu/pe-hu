@@ -169,12 +169,6 @@ nav {
     margin: 1rem 0 0 0;
 }
 
-.hal .edition,
-.hal .special {
-    background: pink;
-    color: #fff;
-}
-
 @media (orientation: portrait) {
     h2 {
         padding: 4rem 2rem;

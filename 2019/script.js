@@ -27,11 +27,17 @@ document.addEventListener('readystatechange', event => {
                         button.dataset.youtube = item.dataset.youtube;
                     } else {
                         button.dataset.youtube = thisYouTube;
-                    }
+                    };
 
-                    a.textContent = "more info";
-                    a.href = item.dataset.link;
-                    a.hidden = false;
+                    if (item.dataset.link) {
+                        a.textContent = "more info";
+                        a.href = item.dataset.link;
+                        a.hidden = false;
+                    } else {
+                        a.textContent = thisNote;
+                        a.href = "#";
+                        a.hidden = true;
+                    };
                 } else {
                     title.textContent = thish2;
                     discription.textContent = thish3;
@@ -41,7 +47,7 @@ document.addEventListener('readystatechange', event => {
                     a.textContent = thisNote;
                     a.href = "#";
                     a.hidden = true;
-                }
+                };
 
                 const element = document.querySelector('#buy');
                 element.scrollIntoView({

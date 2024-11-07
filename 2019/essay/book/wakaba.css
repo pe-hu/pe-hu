@@ -1,0 +1,118 @@
+.wakaba {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 550px;
+    height: 75%;
+    max-height: 400px;
+}
+
+.wakaba::before,
+.wakaba::after {
+    content: '';
+    background: #43B149;
+    width: 50%;
+    height: 50%;
+    border-radius: 10rem;
+}
+
+.wakaba::before,
+.wakaba::after,
+.wakaba u {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.wakaba::before {
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.wakaba::after {
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.wakaba u {
+    display: block;
+    background: linear-gradient(#000, #000);
+    transform: translate(50%, 50%) skewX(-55deg);
+    width: 15%;
+    height: 15%;
+    z-index: 0;
+}
+
+@-webkit-keyframes wakabaL {
+    from {
+        width: 50%;
+        height: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    to {
+        width: 35%;
+        height: 30%;
+        transform: translate(-100%, -50%);
+    }
+}
+
+@-webkit-keyframes wakabaR {
+    from {
+        width: 50%;
+        height: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    to {
+        width: 35%;
+        height: 30%;
+        transform: translate(-0%, -50%);
+    }
+}
+
+@-webkit-keyframes wakaba {
+    from {
+        background: linear-gradient(#000, #000);
+        transform: translate(50%, 50%) skewX(-55deg);
+        width: 15%;
+        height: 15%;
+    }
+
+    to {
+        background: linear-gradient(#43B149 75%, transparent);
+        transform: translate(-50%, -5%);
+        width: 1.5%;
+        height: 20%;
+    }
+}
+
+@media (orientation: landscape) {
+    .wakaba::before {
+        animation: 100s infinite alternate wakabaL;
+    }
+
+    .wakaba::after {
+        animation: 100s infinite alternate wakabaR;
+    }
+
+    .wakaba u {
+        animation: 100s infinite alternate wakaba;
+    }
+}
+
+@media (orientation: portrait) {
+    .wakaba::before {
+        animation: 0 infinite alternate wakabaL;
+    }
+
+    .wakaba::after {
+        animation: 0 infinite alternate wakabaR;
+    }
+
+    .wakaba u {
+        animation: 0 infinite alternate wakaba;
+    }
+}

@@ -2,7 +2,7 @@
 
 document.addEventListener('readystatechange', event => {
     if (event.target.readyState === 'interactive') {
-        indexJSON('index.json');
+        // indexJSON('index.json');
     } else if (event.target.readyState === 'complete') {
         //
     }

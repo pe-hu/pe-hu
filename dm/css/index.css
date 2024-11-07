@@ -46,8 +46,11 @@ main button,
     background: #eee;
 }
 
-h1,
 #preview button {
+    font-size: 300%;
+}
+
+h1 {
     font-size: 200%;
 }
 
@@ -86,7 +89,8 @@ strong,
     font-weight: 500;
 }
 
-h1 {
+h1,
+li {
     line-height: 150%;
 }
 
@@ -189,7 +193,7 @@ main,
 }
 
 #preview button {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
 }
