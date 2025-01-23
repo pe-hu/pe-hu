@@ -1,4 +1,4 @@
-# We are The Community to Trying Create The The to do the things that we want to do.
+# We are The Community to trying Create a Space to do the things that we want to do.
 わたしたちは、実現したいことを快適に実現するための場所・環境をつくり、こ・こ・ろ・豊かな新しい生活を提案する団体です。
 
 <!--
